@@ -13,11 +13,11 @@ Translations
 
 The documentation is available in several languages
 
-`Castellano </docs/es>`_
+`Castellano </projectgenerator/docs/es>`_
 
-`Deutsch </docs/de>`_
+`Deutsch </projectgenerator/docs/de>`_
 
-`English </docs/en>`_
+`English </projectgenerator/docs/en>`_
 
 If there is an error with a translation, please `help to improve it <https://www.transifex.com/opengisch/projectgenerator-documentation/>`_.
 
