@@ -1,0 +1,1 @@
+Search.setIndex({envversion:46,filenames:["index"],objects:{},objnames:{},objtypes:{},terms:{Aleman:0,Busqued:0,Castellan:0,Pagin:0,ayud:0,descubr:0,dispon:0,document:0,error:0,favor:0,idiom:0,ingles:0,mejor:0,traduccion:0,vari:0},titles:["Project Generator para QGIS"],titleterms:{"\u00cdndic":0,Conten:0,Generator:0,Project:0,QGIS:0,Traduccion:0,par:0,tabl:0}})
