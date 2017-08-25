@@ -13,6 +13,8 @@ Contents
    :maxdepth: 1
    :glob:
 
+   get_started
+
 Translations
 ============
 
