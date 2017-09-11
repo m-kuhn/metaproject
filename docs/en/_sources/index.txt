@@ -14,6 +14,7 @@ Contents
    :glob:
 
    get_started
+   user-guide
    development
 
 Translations
