@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>USER GUIDE FOR PROJECT GENERATOR &mdash; Projectgenerator Documentation 1.0 documentation</title>
+    <title>User guide for the QGIS Project Generator &mdash; Projectgenerator Documentation 1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -81,12 +81,12 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">USER GUIDE FOR PROJECT GENERATOR</a><ul>
-<li><a class="reference internal" href="#introduction">INTRODUCTION</a></li>
-<li><a class="reference internal" href="#generate-project">GENERATE (Project)</a></li>
-<li><a class="reference internal" href="#import-interlis-transfer-file-xtf">IMPORT INTERLIS TRANSFER FILE (.xtf)</a></li>
-<li><a class="reference internal" href="#export-interlis-transfer-file-xtf">EXPORT INTERLIS TRANSFER FILE (.xtf)</a></li>
-<li><a class="reference internal" href="#plugin-configuration">PLUGIN CONFIGURATION</a></li>
+<li><a class="reference internal" href="#">User guide for the QGIS Project Generator</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#generate-project">Generate Project</a></li>
+<li><a class="reference internal" href="#import-an-interlis-transfer-file-xtf">Import an Interlis Transfer File (.xtf)</a></li>
+<li><a class="reference internal" href="#export-an-interlis-transfer-file-xtf">Export an Interlis Transfer File (.xtf)</a></li>
+<li><a class="reference internal" href="#plugin-configuration">Plugin Configuration</a></li>
 </ul>
 </li>
 </ul>
@@ -139,40 +139,30 @@
       </div>
     <div class="col-md-9 content">
       
-  <div class="section" id="user-guide-for-project-generator">
-<h1><a class="toc-backref" href="#id1">USER GUIDE FOR PROJECT GENERATOR</a><a class="headerlink" href="#user-guide-for-project-generator" title="Permalink to this headline">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Author:</th><td class="field-body">Sergio Ramírez, Germán Carrillo</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Date:</th><td class="field-body">Agosto 24, 2017</td>
-</tr>
-</tbody>
-</table>
+  <div class="section" id="user-guide-for-the-qgis-project-generator">
+<h1><a class="toc-backref" href="#id1">User guide for the QGIS Project Generator</a><a class="headerlink" href="#user-guide-for-the-qgis-project-generator" title="Permalink to this headline">¶</a></h1>
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#user-guide-for-project-generator" id="id1">USER GUIDE FOR PROJECT GENERATOR</a><ul>
-<li><a class="reference internal" href="#introduction" id="id2">INTRODUCTION</a></li>
-<li><a class="reference internal" href="#generate-project" id="id3">GENERATE (Project)</a></li>
-<li><a class="reference internal" href="#import-interlis-transfer-file-xtf" id="id4">IMPORT INTERLIS TRANSFER FILE (.xtf)</a></li>
-<li><a class="reference internal" href="#export-interlis-transfer-file-xtf" id="id5">EXPORT INTERLIS TRANSFER FILE (.xtf)</a></li>
-<li><a class="reference internal" href="#plugin-configuration" id="id6">PLUGIN CONFIGURATION</a></li>
+<li><a class="reference internal" href="#user-guide-for-the-qgis-project-generator" id="id1">User guide for the QGIS Project Generator</a><ul>
+<li><a class="reference internal" href="#introduction" id="id2">Introduction</a></li>
+<li><a class="reference internal" href="#generate-project" id="id3">Generate Project</a></li>
+<li><a class="reference internal" href="#import-an-interlis-transfer-file-xtf" id="id4">Import an Interlis Transfer File (.xtf)</a></li>
+<li><a class="reference internal" href="#export-an-interlis-transfer-file-xtf" id="id5">Export an Interlis Transfer File (.xtf)</a></li>
+<li><a class="reference internal" href="#plugin-configuration" id="id6">Plugin Configuration</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="introduction">
-<h2><a class="toc-backref" href="#id2">INTRODUCTION</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>This document contains information about Project Generator usage for QGIS 3.</p>
 <p>This is a QGIS plugin to quickly generate QGIS projects from an existing model with a few mouseclicks.</p>
 <p>Configuring QGIS layers and forms manually is a tedious and error prone process. This plugin loads database schemas with various meta information to preconfigure the layer tree, widget configuration, relations and more.</p>
 <p>Interlis models contain more information than a plain database schema. This plugin uses ili2pg to import an Interlis model into a PostgreSQL/PostGIS database and uses the additional meta information to configure the user interface even better.</p>
 </div>
 <div class="section" id="generate-project">
-<h2><a class="toc-backref" href="#id3">GENERATE (Project)</a><a class="headerlink" href="#generate-project" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Generate Project</a><a class="headerlink" href="#generate-project" title="Permalink to this headline">¶</a></h2>
 <p>To generate configured QGIS projects from Interlis models or PostgreSQL/PostGIS schemas, go to menu Database -&gt; Project Generator -&gt; Generate. The result QGIS project is ready to capture and edit data according to the rules defined in source Interlis models. This includes a custom layer tree order, layer edit forms with appropriate widgets per attribute type, constraints, domains (lists of values allowed for certain attributes), relations among layers and more.</p>
 <p>Dialog options are described in the following lines (use numbers to locate specific options in the picture).</p>
 <p><img alt="generate" src="_images/generate.png" /></p>
@@ -211,8 +201,8 @@ Set the password for the database user.</p>
 <p><strong>12.   Log Panel</strong>
 This panel shows log messages of the whole process once Create button is clicked. If in Interlis mode, the Log Panel will show you what ili2pg command was executed (including parameters), as well as the ili2pg output. If in PostGIS mode, the Log Panel shows you what layers are being loaded into QGIS Project.</p>
 </div>
-<div class="section" id="import-interlis-transfer-file-xtf">
-<h2><a class="toc-backref" href="#id4">IMPORT INTERLIS TRANSFER FILE (.xtf)</a><a class="headerlink" href="#import-interlis-transfer-file-xtf" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="import-an-interlis-transfer-file-xtf">
+<h2><a class="toc-backref" href="#id4">Import an Interlis Transfer File (.xtf)</a><a class="headerlink" href="#import-an-interlis-transfer-file-xtf" title="Permalink to this headline">¶</a></h2>
 <p>To import data from Interlis Transfer Files (XTF) into PostgreSQL/PostGIS schemas, go to menu Database -&gt; Project Generator -&gt; Import Interlis Transfer File (.xtf).</p>
 <p>Dialog options are described in the following lines (use numbers to locate specific options in the picture).</p>
 <p><img alt="import" src="_images/import.png" /></p>
@@ -237,8 +227,8 @@ Set the password for the database user.</p>
 <p><strong>10.   Log Panel</strong>
 This panel shows log messages of the whole process once Import button is clicked. It will show you what ili2pg command was executed (including parameters), as well as the ili2pg output.</p>
 </div>
-<div class="section" id="export-interlis-transfer-file-xtf">
-<h2><a class="toc-backref" href="#id5">EXPORT INTERLIS TRANSFER FILE (.xtf)</a><a class="headerlink" href="#export-interlis-transfer-file-xtf" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="export-an-interlis-transfer-file-xtf">
+<h2><a class="toc-backref" href="#id5">Export an Interlis Transfer File (.xtf)</a><a class="headerlink" href="#export-an-interlis-transfer-file-xtf" title="Permalink to this headline">¶</a></h2>
 <p>To export data from PostgreSQL/PostGIS schemas into Interlis Transfer Files (XTF), go to menu Database -&gt; Project Generator -&gt; Export Interlis Transfer File (.xtf).</p>
 <p>Dialog options are described in the following lines (use numbers to locate specific options in the picture).</p>
 <p><img alt="export" src="_images/export.png" /></p>
@@ -262,7 +252,7 @@ Set the password for the database user.</p>
 This panel shows log messages of the whole process once Export button is clicked. It will show you what ili2pg command was executed (including parameters), as well as the ili2pg output.</p>
 </div>
 <div class="section" id="plugin-configuration">
-<h2><a class="toc-backref" href="#id6">PLUGIN CONFIGURATION</a><a class="headerlink" href="#plugin-configuration" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id6">Plugin Configuration</a><a class="headerlink" href="#plugin-configuration" title="Permalink to this headline">¶</a></h2>
 <p>To start using the plugin, go to menu Database -&gt; Project Generator -&gt; Settings, where you can set:</p>
 <blockquote>
 <div><ul>
@@ -287,6 +277,16 @@ This panel shows log messages of the whole process once Export button is clicked
 <p><img alt="settings_3" src="_images/settings_3.png" /></p>
 <p><img alt="settings_4" src="_images/settings_4.png" /></p>
 <p><img alt="settings_5" src="_images/settings_5.png" /></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Author:</th><td class="field-body">Sergio Ramírez, Germán Carrillo</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Date:</th><td class="field-body">Aug 24, 2017</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 

@@ -1,9 +1,6 @@
-================================
-USER GUIDE FOR PROJECT GENERATOR
-================================
-
-:Author: Sergio Ramírez, Germán Carrillo
-:Date: Agosto 24, 2017
+=========================================
+User guide for the QGIS Project Generator
+=========================================
 
 .. contents::
 
@@ -16,7 +13,7 @@ USER GUIDE FOR PROJECT GENERATOR
 .. |import| image:: images/import.png
 .. |export| image:: images/export.png
 
-INTRODUCTION
+Introduction
 ============
 
 This document contains information about Project Generator usage for QGIS 3.
@@ -27,8 +24,8 @@ Configuring QGIS layers and forms manually is a tedious and error prone process.
 
 Interlis models contain more information than a plain database schema. This plugin uses ili2pg to import an Interlis model into a PostgreSQL/PostGIS database and uses the additional meta information to configure the user interface even better.
 
-GENERATE (Project)
-==================
+Generate Project
+================
 
 To generate configured QGIS projects from Interlis models or PostgreSQL/PostGIS schemas, go to menu Database -> Project Generator -> Generate. The result QGIS project is ready to capture and edit data according to the rules defined in source Interlis models. This includes a custom layer tree order, layer edit forms with appropriate widgets per attribute type, constraints, domains (lists of values allowed for certain attributes), relations among layers and more. 
 
@@ -91,8 +88,8 @@ Set the password for the database user.
 This panel shows log messages of the whole process once Create button is clicked. If in Interlis mode, the Log Panel will show you what ili2pg command was executed (including parameters), as well as the ili2pg output. If in PostGIS mode, the Log Panel shows you what layers are being loaded into QGIS Project.
 
 
-IMPORT INTERLIS TRANSFER FILE (.xtf)
-====================================
+Import an Interlis Transfer File (.xtf)
+=======================================
 
 To import data from Interlis Transfer Files (XTF) into PostgreSQL/PostGIS schemas, go to menu Database -> Project Generator -> Import Interlis Transfer File (.xtf). 
 
@@ -132,8 +129,8 @@ Set the password for the database user.
 This panel shows log messages of the whole process once Import button is clicked. It will show you what ili2pg command was executed (including parameters), as well as the ili2pg output.
 
 
-EXPORT INTERLIS TRANSFER FILE (.xtf)
-====================================
+Export an Interlis Transfer File (.xtf)
+=======================================
 
 To export data from PostgreSQL/PostGIS schemas into Interlis Transfer Files (XTF), go to menu Database -> Project Generator -> Export Interlis Transfer File (.xtf).
 
@@ -169,8 +166,8 @@ Set the password for the database user.
 **9.	Log Panel**
 This panel shows log messages of the whole process once Export button is clicked. It will show you what ili2pg command was executed (including parameters), as well as the ili2pg output.
 
-PLUGIN CONFIGURATION
-========================
+Plugin Configuration
+====================
 
 To start using the plugin, go to menu Database -> Project Generator -> Settings, where you can set:
 
@@ -200,3 +197,6 @@ To start using the plugin, go to menu Database -> Project Generator -> Settings,
 |settings_4|
 
 |settings_5|
+
+:Author: Sergio Ramírez, Germán Carrillo
+:Date: Aug 24, 2017
