@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>User guide for the QGIS Project Generator &mdash; documentación de Projectgenerator Documentation - 1.0</title>
+    <title>Guía de usuario para el plugin de QGIS Project Generator &mdash; documentación de Projectgenerator Documentation - 1.0</title>
     
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -70,7 +70,7 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="get_started.html">Get Started</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">User guide for the QGIS Project Generator</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Guía de usuario para el plugin de QGIS Project Generator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
 </ul>
 </ul>
@@ -85,9 +85,9 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">User guide for the QGIS Project Generator</a><ul>
-<li><a class="reference internal" href="#introduction">Introduction</a></li>
-<li><a class="reference internal" href="#generate-project">Generate Project</a></li>
+<li><a class="reference internal" href="#">Guía de usuario para el plugin de QGIS Project Generator</a><ul>
+<li><a class="reference internal" href="#introduction">Introducción</a></li>
+<li><a class="reference internal" href="#generate-project">Generar Proyecto</a></li>
 <li><a class="reference internal" href="#import-an-interlis-transfer-file-xtf">Import an Interlis Transfer File (.xtf)</a></li>
 <li><a class="reference internal" href="#export-an-interlis-transfer-file-xtf">Export an Interlis Transfer File (.xtf)</a></li>
 <li><a class="reference internal" href="#plugin-configuration">Plugin Configuration</a></li>
@@ -143,7 +143,7 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="get_started.html">Get Started</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">User guide for the QGIS Project Generator</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Guía de usuario para el plugin de QGIS Project Generator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
 </ul>
 </ul>
@@ -153,13 +153,13 @@
     <div class="col-md-9 content">
       
   <div class="section" id="user-guide-for-the-qgis-project-generator">
-<h1><a class="toc-backref" href="#id1">User guide for the QGIS Project Generator</a><a class="headerlink" href="#user-guide-for-the-qgis-project-generator" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1><a class="toc-backref" href="#id1">Guía de usuario para el plugin de QGIS Project Generator</a><a class="headerlink" href="#user-guide-for-the-qgis-project-generator" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#user-guide-for-the-qgis-project-generator" id="id1">User guide for the QGIS Project Generator</a><ul>
-<li><a class="reference internal" href="#introduction" id="id2">Introduction</a></li>
-<li><a class="reference internal" href="#generate-project" id="id3">Generate Project</a></li>
+<li><a class="reference internal" href="#user-guide-for-the-qgis-project-generator" id="id1">Guía de usuario para el plugin de QGIS Project Generator</a><ul>
+<li><a class="reference internal" href="#introduction" id="id2">Introducción</a></li>
+<li><a class="reference internal" href="#generate-project" id="id3">Generar Proyecto</a></li>
 <li><a class="reference internal" href="#import-an-interlis-transfer-file-xtf" id="id4">Import an Interlis Transfer File (.xtf)</a></li>
 <li><a class="reference internal" href="#export-an-interlis-transfer-file-xtf" id="id5">Export an Interlis Transfer File (.xtf)</a></li>
 <li><a class="reference internal" href="#plugin-configuration" id="id6">Plugin Configuration</a></li>
@@ -168,14 +168,14 @@
 </ul>
 </div>
 <div class="section" id="introduction">
-<h2><a class="toc-backref" href="#id2">Introduction</a><a class="headerlink" href="#introduction" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>This document contains information about Project Generator usage for QGIS 3.</p>
+<h2><a class="toc-backref" href="#id2">Introducción</a><a class="headerlink" href="#introduction" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El presente documento contiene información sobre las funcionalidades y forma de uso del plugin Project Generator para el software QGIS 3.</p>
 <p>This is a QGIS plugin to quickly generate QGIS projects from an existing model with a few mouseclicks.</p>
 <p>Configuring QGIS layers and forms manually is a tedious and error prone process. This plugin loads database schemas with various meta information to preconfigure the layer tree, widget configuration, relations and more.</p>
 <p>Interlis models contain more information than a plain database schema. This plugin uses ili2pg to import an Interlis model into a PostgreSQL/PostGIS database and uses the additional meta information to configure the user interface even better.</p>
 </div>
 <div class="section" id="generate-project">
-<h2><a class="toc-backref" href="#id3">Generate Project</a><a class="headerlink" href="#generate-project" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Generar Proyecto</a><a class="headerlink" href="#generate-project" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>To generate configured QGIS projects from Interlis models or PostgreSQL/PostGIS schemas, go to menu Database -&gt; Project Generator -&gt; Generate. The result QGIS project is ready to capture and edit data according to the rules defined in source Interlis models. This includes a custom layer tree order, layer edit forms with appropriate widgets per attribute type, constraints, domains (lists of values allowed for certain attributes), relations among layers and more.</p>
 <p>Dialog options are described in the following lines (use numbers to locate specific options in the picture).</p>
 <p><img alt="generate" src="_images/generate.png" /></p>
@@ -183,8 +183,7 @@
 Project Generator is able to generate QGIS projects from both Interlis models or PostgreSQL/PostGIS existing schemas. You should start using this list to choose what mode you want the plugin to work on.</p>
 <p>If you choose <cite>Interlis</cite> Project Generator employs ili2pg under the hood to convert your (conceptual) Interlis models into phisical ones stored in PostgreSQL/PostGIS. As long as you have Internet access when you first run the plugin, you shouldn&#8217;t care about installing ili2pg, since Project Generator will download it and place it in a plugin&#8217;s subfolder.</p>
 <p>If, on the contrary, you choose <cite>PostGIS</cite>, Project Generator uses a PostgreSQL/PostGIS schema to generate your QGIS project. This option allows you to reconstruct a QGIS project from Interlis models, even if they were already converted into phisical models. Note that you could eventually use the plugin for generating QGIS projects from your PostgreSQL/PostGIS schemas, even if they are not related to Interlis in any way, however, Project Generator exploits Interlis expresiveness and we suggest you to use it with Interlis-based models.</p>
-<p><strong>2.    Interlis Model (only for Interlis mode)</strong>
-Based on the Custom Model Directories you set in Plugin Configuration (link), you can choose what models you want to convert into a PostgreSQL/PostGIS schema. Model names are specified in interlis model (ili) files. An ili file can contain a number of models. Since model names should be given strictly as they were spelled in Interlis files, once you start typing, autocompletion will help you discover available models with their correct spelling.</p>
+<p><strong>2. Modelo Interlis (Solo para modo Interlis)</strong> Desde este punto se escribe el modelo Interlis a utilizar para generar el proyecto, este se cachea desde la configuración inicial, por lo cual tiene la opción de autocompletar el nombre del modelo directamente en la interfaz.</p>
 <p><strong>3.    Interlis File (only for Interlis mode)</strong>
 You could get rid of Custom Model Directories and model names and use Interlis model (ili) files directly. The Interlis file you choose will be used to convert your models into a PostgreSQL/PostGIS schema.</p>
 <p><strong>4.    Coordinate Reference System - CRS (only for Interlis mode)</strong>
