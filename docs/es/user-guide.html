@@ -88,9 +88,9 @@
 <li><a class="reference internal" href="#">Guía de usuario para el plugin de QGIS Project Generator</a><ul>
 <li><a class="reference internal" href="#introduction">Introducción</a></li>
 <li><a class="reference internal" href="#generate-project">Generar Proyecto</a></li>
-<li><a class="reference internal" href="#import-an-interlis-transfer-file-xtf">Import an Interlis Transfer File (.xtf)</a></li>
+<li><a class="reference internal" href="#import-an-interlis-transfer-file-xtf">Importar un archivo de transferencia de Interlis (.xtf)</a></li>
 <li><a class="reference internal" href="#export-an-interlis-transfer-file-xtf">Export an Interlis Transfer File (.xtf)</a></li>
-<li><a class="reference internal" href="#plugin-configuration">Plugin Configuration</a></li>
+<li><a class="reference internal" href="#plugin-configuration">Configuración del Plugin</a></li>
 </ul>
 </li>
 </ul>
@@ -160,9 +160,9 @@
 <li><a class="reference internal" href="#user-guide-for-the-qgis-project-generator" id="id1">Guía de usuario para el plugin de QGIS Project Generator</a><ul>
 <li><a class="reference internal" href="#introduction" id="id2">Introducción</a></li>
 <li><a class="reference internal" href="#generate-project" id="id3">Generar Proyecto</a></li>
-<li><a class="reference internal" href="#import-an-interlis-transfer-file-xtf" id="id4">Import an Interlis Transfer File (.xtf)</a></li>
+<li><a class="reference internal" href="#import-an-interlis-transfer-file-xtf" id="id4">Importar un archivo de transferencia de Interlis (.xtf)</a></li>
 <li><a class="reference internal" href="#export-an-interlis-transfer-file-xtf" id="id5">Export an Interlis Transfer File (.xtf)</a></li>
-<li><a class="reference internal" href="#plugin-configuration" id="id6">Plugin Configuration</a></li>
+<li><a class="reference internal" href="#plugin-configuration" id="id6">Configuración del Plugin</a></li>
 </ul>
 </li>
 </ul>
@@ -170,62 +170,50 @@
 <div class="section" id="introduction">
 <h2><a class="toc-backref" href="#id2">Introducción</a><a class="headerlink" href="#introduction" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El presente documento contiene información sobre las funcionalidades y forma de uso del plugin Project Generator para el software QGIS 3.</p>
-<p>This is a QGIS plugin to quickly generate QGIS projects from an existing model with a few mouseclicks.</p>
-<p>Configuring QGIS layers and forms manually is a tedious and error prone process. This plugin loads database schemas with various meta information to preconfigure the layer tree, widget configuration, relations and more.</p>
-<p>Interlis models contain more information than a plain database schema. This plugin uses ili2pg to import an Interlis model into a PostgreSQL/PostGIS database and uses the additional meta information to configure the user interface even better.</p>
+<p>Este es un plugin de QGIS que permite generar rapidamente proyectos de QGIS desde modelos ILI existentes con unos pocos clicks.</p>
+<p>Configurar las capas en QGIS de forma manual es un proceso tedioso y sujeto a errores. Este plugin carga los esquemas de la base de datos con metainformación para preconfigurar el arbol de capas, configuración de formularios, relaciones y más.</p>
+<p>Los modelos de interlis contienen más información que un esquema plano de base de datos. Este plugin usa ili2pg para importar modelos de interlis a una base de datos PostgreSQL/PostGIS y usa meta información adicional para configurar mucho mejor la interfaz de usuario.</p>
 </div>
 <div class="section" id="generate-project">
 <h2><a class="toc-backref" href="#id3">Generar Proyecto</a><a class="headerlink" href="#generate-project" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>To generate configured QGIS projects from Interlis models or PostgreSQL/PostGIS schemas, go to menu Database -&gt; Project Generator -&gt; Generate. The result QGIS project is ready to capture and edit data according to the rules defined in source Interlis models. This includes a custom layer tree order, layer edit forms with appropriate widgets per attribute type, constraints, domains (lists of values allowed for certain attributes), relations among layers and more.</p>
-<p>Dialog options are described in the following lines (use numbers to locate specific options in the picture).</p>
+<p>Para generar proyectos de QGIS configurados desde modelos de interlis o esquemas PostgreSQL/PostGIS, vaya al menú Base de datos -&gt; Project Generator -&gt; Generar. El resutado es un proyecto de QGIS listo para capturar y editar información de acuerdo a las reglas definidas en los modelos de interlis fuente. Esto incluye un arbol de capas personalizado, formularios de edición de capas con widgets apropiados por tipo de atributo, restricciones, dominios (lista de valores permitidos para ciertos atributos), relaciones entre layers y más.</p>
+<p>En el diálogo de opciones están descritas en las siguientes lineas (usa números para localizar específicamente las opciones en la imagen)</p>
 <p><img alt="generate" src="_images/generate.png" /></p>
-<p><strong>1.    Generation Mode</strong>
-Project Generator is able to generate QGIS projects from both Interlis models or PostgreSQL/PostGIS existing schemas. You should start using this list to choose what mode you want the plugin to work on.</p>
-<p>If you choose <cite>Interlis</cite> Project Generator employs ili2pg under the hood to convert your (conceptual) Interlis models into phisical ones stored in PostgreSQL/PostGIS. As long as you have Internet access when you first run the plugin, you shouldn&#8217;t care about installing ili2pg, since Project Generator will download it and place it in a plugin&#8217;s subfolder.</p>
-<p>If, on the contrary, you choose <cite>PostGIS</cite>, Project Generator uses a PostgreSQL/PostGIS schema to generate your QGIS project. This option allows you to reconstruct a QGIS project from Interlis models, even if they were already converted into phisical models. Note that you could eventually use the plugin for generating QGIS projects from your PostgreSQL/PostGIS schemas, even if they are not related to Interlis in any way, however, Project Generator exploits Interlis expresiveness and we suggest you to use it with Interlis-based models.</p>
-<p><strong>2. Modelo Interlis (Solo para modo Interlis)</strong> Desde este punto se escribe el modelo Interlis a utilizar para generar el proyecto, este se cachea desde la configuración inicial, por lo cual tiene la opción de autocompletar el nombre del modelo directamente en la interfaz.</p>
-<p><strong>3.    Interlis File (only for Interlis mode)</strong>
-You could get rid of Custom Model Directories and model names and use Interlis model (ili) files directly. The Interlis file you choose will be used to convert your models into a PostgreSQL/PostGIS schema.</p>
-<p><strong>4.    Coordinate Reference System - CRS (only for Interlis mode)</strong>
-You can set the CRS you want to use for geometry tables defined in your Interlis models. CRS information will be stored into PostgreSQL/PostGIS.</p>
-<p><strong>5.    Advanced options (only for Interlis mode)</strong>
-Since Project Generator uses ili2db when in Interlis mode, you can set advanced options that determine how your conceptual object-oriented model is mapped into a PostgreSQL/PostGIS  relational model.</p>
-<p>ili2db allows you to use three types of inheritance mapping: &#8220;noSmartMapping&#8221;, &#8220;smart1inheritance&#8221; and &#8220;smart2inheritance&#8221;:</p>
+<p><strong>1. Modo de generación del proyecto</strong> Project Generator es capaź de generar proyectos de QGIS desde modelos de interlis o esquemas existentes PostgreSQL/PostGIS. Uste debe arrancar usando esta lista para para elegir con cuál modo quiere que trabaje el plugin.</p>
+<p>Si usted selecciona <cite>Interlis</cite>, Project Generator utiliza ili2pg por debajo para convertirl el modelo interlis (conceptual) en un modelo físico el cual queda almacenado en PostgreSQL/PostGIS. Es necesario tener acceso a internet cuando se ejecuta el plugin por primera vez, no debe preocuparse por instalar ili2pg, Project Generator lo descargará y lo ubicará en una subcarpeta del plugin.</p>
+<p>Si, por el contrario, usted escoje <cite>PostGIS</cite>, Project Generator usa un esquema PostgreSQL/PostGIS para generar su proyecto de QGIS. Esta opción le permite reconstruir un proyecto de QGIS desde modelos de interlis, solo si éste ya fue anteriormente convertido a un modelo físico. Tenga en cuenta que podría utlizar el complemento para generar proyectos de QGIS desde sus esquemas PostgreSQL/PostGIS, aún si éstos no están relacionados de alguna manera con interlis, sin embargo, Project Generator explora la expresividad de interlis por lo cual le sugerimos que lo use con modelos basados en interlis.</p>
+<p><strong>2. Modelo Interlis (Solo para modo Interlis)</strong> Basado en las rutas personalizadas de directorios que definió en la configuración del plugin (link), usted puede seleccionar qué modelos desea convertir en un esquema de PostgreSQL/PostGIS. Los nombres de los modelos están especificados en los archivos de los modelos de interlis (ili). Un archivo de interlis puede contener varios modelos o uno solo. Los nombres de los modelos se deben dar estrictamente tal como se escribieron en los archivos de interlis, una vez usted empieza a escribir, el autocompletado le ayudará a descubir los modelos disponibles con su escritura correcta.</p>
+<p><strong>3. Archivo de Interlis (solo para el modo Interlis)</strong> Puede evitar el uso de directorios de modelos personalizados y utilizar arhcivos de modelo interlis (ili) directamente. El archivo de interlis que haya escogido será usado para convertir sus modelos a un esquema de PostgreSQL/PostGIS.</p>
+<p><strong>4. Sistema de referencia de coordenadas - SRC (solo para el modo Interlis)</strong> Usted puede definir el SRC que desea usar para las gemetrías definidas en sus modelos de Interlis. La información de los SRC sera almacenada en PostgreSQL/PostGIS.</p>
+<p><strong>5. Opciones avanzadas (Solo para el modo Interlis)</strong>  Dado que Project Generator usa ili2db cuando se encuentra en modo interlis, usted puede definir las opciones avanzadas que determinan cómo su modelo conceptual orientado a objetos es mapeado dentro de un modelo relacional en PostgreSQL/PostGIS.</p>
+<p>Ili2db le permite utilizar 3 tipos de mapeo de herencias: &#8220;Sin Mapeo&#8221;, &#8220;Herencia Tipo 1 (preferir clases padre)&#8221; y &#8220;Herencia Tipo 2 (preferir clases hijas)&#8221;:</p>
 <blockquote>
 <div><ul class="simple">
-<li><strong>noSmartMapping</strong> This kind of inheritance maps all classes from the source Interlis model into the target database schema. Each class mantains all its attributes.</li>
-<li><strong>smart1inheritance</strong> This kind of inheritance prefers to create parent classes into the database, as long as they fulfill some specific requirements. Attributes from children classes will not be lost, since they are transferred into parent ones.</li>
-<li><strong>smart2inheritance</strong> This kind of inheritance prefers to create children classes into the database. Attribute from parent classes will not be lost, since they are transferred into children ones.</li>
+<li><p class="first"><strong>noSmartMapping</strong> Este tipo de herencia mapea todas las clases desde el modelo de interlis fuente dentro del esquema objetivo de base de datos. Cada clase mantiene todos sus atributos.</p>
+</li>
+<li><p class="first"><strong>Herencia Tipo 1 (preferir clases padre)</strong> Este tipo de herencia prefiere crear las clases padre dentro de la base de datos, siempre y cuando cumplan con algunos requerimientos especificos. Los atributos de las clases hijas no se perderán, éstos serán transferidos dentro de las clases padres.</p>
+</li>
+<li><p class="first"><strong>Herencia Tipo 2 (preferir clases hijas)</strong> Este tipo de herencia prefiere crear las clases hijas dentro de la base de datos. Los atributos de las clases padre no se perdarán, éstos se transferirán dentro de las clase hijas.</p>
+</li>
 </ul>
 </div></blockquote>
-<p><strong>6.    Database Host</strong>
-Set the host of the database server. By default is localhost.</p>
-<p><strong>7.    Database Port</strong>
-Set the port of the database server. By default is 5432.</p>
-<p><strong>8.    Database Name</strong>
-Set the database name. The database should exist already.</p>
-<p><strong>9.    Database Schema</strong>
-Set the database schema where you want to create the phisical model. The schema acts like a folder, it helps you to organize database objects like tables and relations and isolate them from other schemas. If you don&#8217;t specify a database schema, Project Generator will create a schema for you, whose name will correspond to the database name. You can even choose an existing schema, but you&#8217;d better know what you&#8217;re doing, because it will overwrite previous ili2db configurations.</p>
-<p><strong>10.   Database User</strong>
-Set the user to access the database.</p>
-<p><strong>11.   User Password</strong>
-Set the password for the database user.</p>
-<p><strong>12.   Log Panel</strong>
-This panel shows log messages of the whole process once Create button is clicked. If in Interlis mode, the Log Panel will show you what ili2pg command was executed (including parameters), as well as the ili2pg output. If in PostGIS mode, the Log Panel shows you what layers are being loaded into QGIS Project.</p>
+<p><strong>6.    Host de la base de datos</strong> Define el host del servidor de base de datos. Por defecto es localhost.</p>
+<p><strong>7.    Puerto de la base de datos</strong> Define el puerto del servidor de la base de datos. Por defecto es 5432.</p>
+<p><strong>8.    Nombre de la base de datos</strong> Define el nombre de la base de datos. La base de datos debe existir con anterioridad.</p>
+<p><strong>9.    Esquema de la base de datos</strong> Define el esquema de la base de datos donde usted desea crear el modelo físico. El esquema actúa como una carpeta, le ayuda a organizar los objetos de la base de datos como tablas y relaciones y los aisla de otros esquemas. Si usted no especifica un esquema de base de datos, Project Generator creará un esquema por usted, el nombre del mismo corresponderá con el nombre de la base de datos. Usted puede inclusive escoger un esquema existente, pero debe tener claro lo que realizará, porque esto sobreescribe configuraciones de ili2db anteriores.</p>
+<p><strong>10.    Usuario de la base de datos</strong> Define el usuario para acceder a la base de datos.</p>
+<p><strong>11.    Contraseña del usuario</strong> Define la contraseña para usuario de la base de datos.</p>
+<p><strong>12.    Panel de registro</strong> Este panel muestra los mensajes registrados durante todo el proceso una vez el botón de crear es clickeado. Si se encuentra en el modo interlis, el panel de registro mostrará los comandos que ili2pg ejecutó (incluyendo los parametros), así como la salida de ili2pg. Si se encuentra en el modo PostGIS, el panel de registro mostrará que capas están siendo cargadas dentro del proyecto de QGIS.</p>
 </div>
 <div class="section" id="import-an-interlis-transfer-file-xtf">
-<h2><a class="toc-backref" href="#id4">Import an Interlis Transfer File (.xtf)</a><a class="headerlink" href="#import-an-interlis-transfer-file-xtf" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>To import data from Interlis Transfer Files (XTF) into PostgreSQL/PostGIS schemas, go to menu Database -&gt; Project Generator -&gt; Import Interlis Transfer File (.xtf).</p>
-<p>Dialog options are described in the following lines (use numbers to locate specific options in the picture).</p>
+<h2><a class="toc-backref" href="#id4">Importar un archivo de transferencia de Interlis (.xtf)</a><a class="headerlink" href="#import-an-interlis-transfer-file-xtf" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para importar información desde archivos de transferencia de interlis (XTF) dentro de esquemas PostgreSQL/PostGIS, vaya al menu Base de datos -&gt; Project Generator -&gt; Importar archivo de transferencia de Interlis (.xtf).</p>
+<p>En el diálogo de opciones están descritas en las siguientes lineas (usa números para localizar específicamente las opciones en la imagen)</p>
 <p><img alt="import" src="_images/import.png" /></p>
-<p><strong>1.    XTF File</strong>
-Set source XTF file location. The XTF is an Interlis Transfer File, containing spatial and/or alphanumeric data. Usually, you generate XTF files running Export data to Interlis Transfer File (.xtf).</p>
-<p><strong>2.    Models</strong>
-Based on the Custom Model Directories you set in Plugin Configuration (link), you can choose what models you want to use to import data from the source XTF file.</p>
-<p><strong>3.    Delete existing data in affected tables</strong>
-Enabling this option deletes all existing data in tables where the import will insert data from the XTF file.</p>
-<p><strong>4.    Database Host</strong>
-Set the host of the database server. By default is localhost.</p>
+<p><strong>1.    Archivo XTF</strong> Define la ruta fuente del archivo XTF. El XTF es un arhivo de transferencia de Interlis, contiene información tanto espacial como alfanumérica. Usualmente, usted genera archivos XTF corriendo la función Exportar información a un archivo de transferencia de Interlis (.xtf).</p>
+<p><strong>2.    Modelos</strong> Basado en las rutas de directior personalizadas definidas en la configuración del plugin (link), usted puede escoger qué modelos desea usar para importar información desde el archivo XTF fuente.</p>
+<p><strong>3. Borrar información existente en las tablas afectadas</strong> Activando esta opción se elimina toda la información existente en las tablas donde la importación insertará datos desde el archivo XTF.</p>
+<p><strong>4.    Host de la base de datos</strong> Define el host del servidor de base de datos. Por defecto es localhost.</p>
 <p><strong>5.    Database Port</strong>
 Set the port of the database server. By default is 5432.</p>
 <p><strong>6.    Database Name</strong>
@@ -242,7 +230,7 @@ This panel shows log messages of the whole process once Import button is clicked
 <div class="section" id="export-an-interlis-transfer-file-xtf">
 <h2><a class="toc-backref" href="#id5">Export an Interlis Transfer File (.xtf)</a><a class="headerlink" href="#export-an-interlis-transfer-file-xtf" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>To export data from PostgreSQL/PostGIS schemas into Interlis Transfer Files (XTF), go to menu Database -&gt; Project Generator -&gt; Export Interlis Transfer File (.xtf).</p>
-<p>Dialog options are described in the following lines (use numbers to locate specific options in the picture).</p>
+<p>En el diálogo de opciones están descritas en las siguientes lineas (usa números para localizar específicamente las opciones en la imagen)</p>
 <p><img alt="export" src="_images/export.png" /></p>
 <p><strong>1.    XTF File</strong>
 Set the XTF file where you want to export your data to.</p>
@@ -264,7 +252,7 @@ Set the password for the database user.</p>
 This panel shows log messages of the whole process once Export button is clicked. It will show you what ili2pg command was executed (including parameters), as well as the ili2pg output.</p>
 </div>
 <div class="section" id="plugin-configuration">
-<h2><a class="toc-backref" href="#id6">Plugin Configuration</a><a class="headerlink" href="#plugin-configuration" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id6">Configuración del Plugin</a><a class="headerlink" href="#plugin-configuration" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>To start using the plugin, go to menu Database -&gt; Project Generator -&gt; Settings, where you can set:</p>
 <blockquote>
 <div><ul>
@@ -295,7 +283,8 @@ This panel shows log messages of the whole process once Export button is clicked
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Author:</th><td class="field-body">Sergio Ramírez, Germán Carrillo</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Date:</th><td class="field-body">Aug 24, 2017</td>
+<tr class="field-even field"><th class="field-name">Date:</th><td class="field-body"><p class="first last">24 de Agosto, 2017</p>
+</td>
 </tr>
 </tbody>
 </table>
