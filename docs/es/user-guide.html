@@ -89,7 +89,7 @@
 <li><a class="reference internal" href="#introduction">Introducción</a></li>
 <li><a class="reference internal" href="#generate-project">Generar Proyecto</a></li>
 <li><a class="reference internal" href="#import-an-interlis-transfer-file-xtf">Importar un archivo de transferencia de Interlis (.xtf)</a></li>
-<li><a class="reference internal" href="#export-an-interlis-transfer-file-xtf">Export an Interlis Transfer File (.xtf)</a></li>
+<li><a class="reference internal" href="#export-an-interlis-transfer-file-xtf">Exportar un archivo de intercambio de Interlis (.xtf)</a></li>
 <li><a class="reference internal" href="#plugin-configuration">Configuración del Plugin</a></li>
 </ul>
 </li>
@@ -161,7 +161,7 @@
 <li><a class="reference internal" href="#introduction" id="id2">Introducción</a></li>
 <li><a class="reference internal" href="#generate-project" id="id3">Generar Proyecto</a></li>
 <li><a class="reference internal" href="#import-an-interlis-transfer-file-xtf" id="id4">Importar un archivo de transferencia de Interlis (.xtf)</a></li>
-<li><a class="reference internal" href="#export-an-interlis-transfer-file-xtf" id="id5">Export an Interlis Transfer File (.xtf)</a></li>
+<li><a class="reference internal" href="#export-an-interlis-transfer-file-xtf" id="id5">Exportar un archivo de intercambio de Interlis (.xtf)</a></li>
 <li><a class="reference internal" href="#plugin-configuration" id="id6">Configuración del Plugin</a></li>
 </ul>
 </li>
@@ -214,61 +214,49 @@
 <p><strong>2.    Modelos</strong> Basado en las rutas de directior personalizadas definidas en la configuración del plugin (link), usted puede escoger qué modelos desea usar para importar información desde el archivo XTF fuente.</p>
 <p><strong>3. Borrar información existente en las tablas afectadas</strong> Activando esta opción se elimina toda la información existente en las tablas donde la importación insertará datos desde el archivo XTF.</p>
 <p><strong>4.    Host de la base de datos</strong> Define el host del servidor de base de datos. Por defecto es localhost.</p>
-<p><strong>5.    Database Port</strong>
-Set the port of the database server. By default is 5432.</p>
-<p><strong>6.    Database Name</strong>
-Set the database name. The database should exist already.</p>
-<p><strong>7.    Database Schema</strong>
-Set the database schema where you want to import data from the XTF file. Normally, you would import data into existing schemas, but you could also import your data into new schemas. In the former case, your data are expected to follow the model with which the existing schema was generated, otherwise errors may occur. In the latter case, a new schema will be generated with default parameters given by Project Generator and from previous sessions (if you have run Generate before).</p>
-<p><strong>8.    Database User</strong>
-Set the user to access the database.</p>
-<p><strong>9.    User Password</strong>
-Set the password for the database user.</p>
-<p><strong>10.   Log Panel</strong>
-This panel shows log messages of the whole process once Import button is clicked. It will show you what ili2pg command was executed (including parameters), as well as the ili2pg output.</p>
+<p><strong>5. Puerto de la base de datos</strong> Define el puerto del servidor de la base de datos. Por defecto es 5432.</p>
+<p><strong>6. Nombre de la base de datos</strong> Define el nombre de la base de datos. La base de datos debe existir con anterioridad.</p>
+<p><strong>7. Esquema de la base de datos</strong> Define el esquema de la base de datos donde uste desea importar información desde un archivo XTF. Normalmente, se importan esquemas dentro de esquemas existentes, pero también se puede importar su información en nuevos esquemas. En el primer caso, su información se espera que siga el modelo en el que el esquema existente fue generado, de otra manera podran ocurrir errores. En el otro caso, un nuevo esquema será generado con los parametros por defecto entregados a Project Generator y de sesiones previas (si se llegó a correr antes la opción Generar).</p>
+<p><strong>8. Usuario de la base de datos</strong> Define el usuario para acceder a la base de datos.</p>
+<p><strong>9. Contraseña del usuario</strong> Define la contraseña para usuario de la base de datos.</p>
+<p><strong>10. Panel de registro</strong> Este panel muestra los mensajes registrados de todo el proceso una vez el botón de Importar es clickeado. Este mostrará que comando de ili2pg fue ejecutado (incluyendo los parámetros), tanto como la salida de ili2pg.</p>
 </div>
 <div class="section" id="export-an-interlis-transfer-file-xtf">
-<h2><a class="toc-backref" href="#id5">Export an Interlis Transfer File (.xtf)</a><a class="headerlink" href="#export-an-interlis-transfer-file-xtf" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>To export data from PostgreSQL/PostGIS schemas into Interlis Transfer Files (XTF), go to menu Database -&gt; Project Generator -&gt; Export Interlis Transfer File (.xtf).</p>
+<h2><a class="toc-backref" href="#id5">Exportar un archivo de intercambio de Interlis (.xtf)</a><a class="headerlink" href="#export-an-interlis-transfer-file-xtf" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para exportar información desde esquemas PostgreSQL/PostGIS a archivos de intercambio de interlis (XTF), vaya al menú Base de datos -&gt; Project Generator -&gt; Exportar archivo de intercambio de Interlis (.xtf).</p>
 <p>En el diálogo de opciones están descritas en las siguientes lineas (usa números para localizar específicamente las opciones en la imagen)</p>
 <p><img alt="export" src="_images/export.png" /></p>
-<p><strong>1.    XTF File</strong>
-Set the XTF file where you want to export your data to.</p>
-<p><strong>2.    Models</strong>
-Set models you want to use to filter the data that will be exported.</p>
-<p><strong>3.    Database Host</strong>
-Set the host of the database server. By default is localhost.</p>
-<p><strong>4.    Database Port</strong>
-Set the port of the database server. By default is 5432.</p>
-<p><strong>5.    Database Name</strong>
-Set the database name. The database should exist already.</p>
-<p><strong>6.    Database Schema</strong>
-Set the database schema where data is located before exporting them to XTF.</p>
-<p><strong>7.    Database User</strong>
-Set the user to access the database.</p>
-<p><strong>8.    User Password</strong>
-Set the password for the database user.</p>
-<p><strong>9.    Log Panel</strong>
-This panel shows log messages of the whole process once Export button is clicked. It will show you what ili2pg command was executed (including parameters), as well as the ili2pg output.</p>
+<p><strong>1. Archivo XTF</strong> Define el archivo XTF donde usted quiere exportar su información,</p>
+<p><strong>2. Modelos</strong> Define modelos que desea usar como filtro de la información que será exportada.</p>
+<p><strong>3. Host de la base de datos</strong> Define el host del servidor de base de datos. Por defecto es localhost.</p>
+<p><strong>4. Puerto de la base de datos</strong> Define el puerto del servidor de la base de datos. Por defecto es 5432.</p>
+<p><strong>5. Nombre de la base de datos</strong> Define el nombre de la base de datos. La base de datos debe existir con anterioridad.</p>
+<p><strong>6. Esquema de la Base de datps</strong> Define el esquema de la base de datos donde se encuentra localizada la información antes de exportarla a XTF.</p>
+<p><strong>7. Usuario de la base de datos</strong> Define el usuario para acceder a la base de datos.</p>
+<p><strong>8. Contraseña del usuario</strong> Define la contraseña para usuario de la base de datos.</p>
+<p><strong>9. Panel de registro</strong> Este panel muestra los mensajes registrados de todo el proceso una vez el botón de Exportar es clickeado. Este mostrará que comando de ili2pg fue ejecutado (incluyendo los parámetros), tanto como la salida de ili2pg.</p>
 </div>
 <div class="section" id="plugin-configuration">
 <h2><a class="toc-backref" href="#id6">Configuración del Plugin</a><a class="headerlink" href="#plugin-configuration" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>To start using the plugin, go to menu Database -&gt; Project Generator -&gt; Settings, where you can set:</p>
+<p>Para empezar a usar el plugin, vaya al menú Base de datos -&gt; Project Generator -&gt; Configuración, donde usted puede definir:</p>
 <blockquote>
 <div><ul>
-<li><p class="first"><strong>Custom Model Directories</strong>:</p>
-<p>In this window you can set one or several paths to let ili2db where to find your Interlis models (ili files). Paths can be both local directories or URLs to remote model repositories. Several paths should be separated by semicolons.</p>
-<p>By default, ili2db uses <cite>%ILI_FROM_DB;%XTF_DIR;http://models.interlis.ch/;%JAR_DIR</cite>, where:</p>
+<li><p class="first"><strong>Rutas personalizadas a modelos</strong></p>
+<p>En esta ventana usted puede definir una o muchas rutas para permitir a ili2d encontrar sus modelos de interlis (archivos ili). Las rutas pueden tener tanto directorios locales o URLs a repositorios remotos de modelos. Cada ruta debe estar separada por punto y coma &#8221;;&#8221;.</p>
+<p>Por defecto, ili2db usa <cite>%ILI_FROM_DB;XTF_DIR;http://models.interlis.ch/;%JAR_DIR</cite>, donde:</p>
 <blockquote>
 <div><ul class="simple">
-<li><cite>%ILI_FROM_DB</cite> is a placeholder for the models in the database (in table t_ili2db_model),</li>
-<li><cite>%XTF_DIR</cite> is a placeholder for the directory with the transfer file,</li>
-<li><cite>%JAR_DIR</cite> is a placeholder for the ili2db program (ili2pg.jar or ili2gpkg.jar file).</li>
+<li><p class="first"><cite>%ILI_FROM_DB</cite> es un marcador de posiciones para los modelos en la base de datos (en la tabla t_ili2db_model),</p>
+</li>
+<li><p class="first"><cite>XTF_DIR</cite> es un marcador de posición para el directorio con el archivo de transferencia,</p>
+</li>
+<li><p class="first"><cite>%JAR_DIR</cite> es un marcador de posición para el programa ili2db (archivo ili2pg.jar o ili2gpkg.jar).</p>
+</li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first"><strong>Java Path</strong>:</p>
-<p>By default, Project Generator searches for Java executable in <cite>%JAVA_HOME</cite> environment variable. However, you can overwrite such behavior by setting a custom path to Java executable file in this window. This is useful, for instance, when environment variables are not well set and you have no rights to set them in your machine&#8217;s operating system.</p>
+<li><p class="first"><strong>Ruta Java</strong>:</p>
+<p>Por defecto, Project Generator busca ejecutables java en la variable de entorno <cite>%JAVA_HOME</cite>. Sin embargo, usted puede sobreescribir este parametro definiendo una ruta personalizada a un executable Java en esta ventana. Esto es muy útil, por ejemplo, cuando las variables de entorno no están bien definidas y usted no tiene permisos para definirla en el sistema operativo de su equipo.</p>
 </li>
 </ul>
 </div></blockquote>
