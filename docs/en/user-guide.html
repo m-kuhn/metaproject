@@ -71,6 +71,7 @@
 <li class="toctree-l1"><a class="reference internal" href="get_started.html">Get Started</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">User guide for the QGIS Project Generator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta_attributes.html">Meta Attributes</a></li>
 </ul>
 </ul>
 </li>
@@ -144,6 +145,7 @@
 <li class="toctree-l1"><a class="reference internal" href="get_started.html">Get Started</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">User guide for the QGIS Project Generator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta_attributes.html">Meta Attributes</a></li>
 </ul>
 </ul>
 </li>
@@ -190,6 +192,7 @@ You could get rid of Custom Model Directories and model names and use Interlis m
 You can set the CRS you want to use for geometry tables defined in your Interlis models. CRS information will be stored into PostgreSQL/PostGIS.</p>
 <p><strong>5.    Advanced options (only for Interlis mode)</strong>
 Since Project Generator uses ili2db when in Interlis mode, you can set advanced options that determine how your conceptual object-oriented model is mapped into a PostgreSQL/PostGIS  relational model.</p>
+<p><strong>*Inheritance*</strong></p>
 <p>ili2db allows you to use three types of inheritance mapping: &#8220;noSmartMapping&#8221;, &#8220;smart1inheritance&#8221; and &#8220;smart2inheritance&#8221;:</p>
 <blockquote>
 <div><ul class="simple">
@@ -198,6 +201,8 @@ Since Project Generator uses ili2db when in Interlis mode, you can set advanced 
 <li><strong>smart2inheritance</strong> This kind of inheritance prefers to create children classes into the database. Attribute from parent classes will not be lost, since they are transferred into children ones.</li>
 </ul>
 </div></blockquote>
+<p><strong>*Extra Model Information File*</strong></p>
+<p>A *.toml file containing values for meta attributes (like dispExpression) instead of having them directly in the Interlis file. The file can be selected per model configuration.</p>
 <p><strong>6.    Database Host</strong>
 Set the host of the database server. By default is localhost.</p>
 <p><strong>7.    Database Port</strong>

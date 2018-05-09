@@ -57,6 +57,8 @@ You can set the CRS you want to use for geometry tables defined in your Interlis
 **5.	Advanced options (only for Interlis mode)**
 Since Project Generator uses ili2db when in Interlis mode, you can set advanced options that determine how your conceptual object-oriented model is mapped into a PostgreSQL/PostGIS  relational model.
 
+***Inheritance***
+
 ili2db allows you to use three types of inheritance mapping: "noSmartMapping", "smart1inheritance" and "smart2inheritance":
 
  + **noSmartMapping** This kind of inheritance maps all classes from the source Interlis model into the target database schema. Each class mantains all its attributes.
@@ -64,6 +66,10 @@ ili2db allows you to use three types of inheritance mapping: "noSmartMapping", "
  + **smart1inheritance** This kind of inheritance prefers to create parent classes into the database, as long as they fulfill some specific requirements. Attributes from children classes will not be lost, since they are transferred into parent ones.
 
  + **smart2inheritance** This kind of inheritance prefers to create children classes into the database. Attribute from parent classes will not be lost, since they are transferred into children ones.
+ 
+***Extra Model Information File***
+ 
+A \*.toml file containing values for meta attributes (like dispExpression) instead of having them directly in the Interlis file. The file can be selected per model configuration.
 
 
 **6.	Database Host**

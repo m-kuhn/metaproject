@@ -72,6 +72,7 @@
 <li class="toctree-l1"><a class="reference internal" href="get_started.html">Para iniciar</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Guía de usuario para el plugin de QGIS Project Generator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Desarrollo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta_attributes.html">Meta Attributes</a></li>
 </ul>
 </ul>
 </li>
@@ -145,6 +146,7 @@
 <li class="toctree-l1"><a class="reference internal" href="get_started.html">Para iniciar</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Guía de usuario para el plugin de QGIS Project Generator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Desarrollo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta_attributes.html">Meta Attributes</a></li>
 </ul>
 </ul>
 </li>
@@ -186,6 +188,7 @@
 <p><strong>3. Archivo de Interlis (solo para el modo Interlis)</strong> Puede evitar el uso de directorios de modelos personalizados y utilizar arhcivos de modelo interlis (ili) directamente. El archivo de interlis que haya escogido será usado para convertir sus modelos a un esquema de PostgreSQL/PostGIS.</p>
 <p><strong>4. Sistema de referencia de coordenadas - SRC (solo para el modo Interlis)</strong> Usted puede definir el SRC que desea usar para las gemetrías definidas en sus modelos de Interlis. La información de los SRC sera almacenada en PostgreSQL/PostGIS.</p>
 <p><strong>5. Opciones avanzadas (Solo para el modo Interlis)</strong>  Dado que Project Generator usa ili2db cuando se encuentra en modo interlis, usted puede definir las opciones avanzadas que determinan cómo su modelo conceptual orientado a objetos es mapeado dentro de un modelo relacional en PostgreSQL/PostGIS.</p>
+<p><strong>*Inheritance*</strong></p>
 <p>Ili2db le permite utilizar 3 tipos de mapeo de herencias: &#8220;Sin Mapeo&#8221;, &#8220;Herencia Tipo 1 (preferir clases padre)&#8221; y &#8220;Herencia Tipo 2 (preferir clases hijas)&#8221;:</p>
 <blockquote>
 <div><ul class="simple">
@@ -197,6 +200,8 @@
 </li>
 </ul>
 </div></blockquote>
+<p><strong>*Extra Model Information File*</strong></p>
+<p>A *.toml file containing values for meta attributes (like dispExpression) instead of having them directly in the Interlis file. The file can be selected per model configuration.</p>
 <p><strong>6.    Host de la base de datos</strong> Define el host del servidor de base de datos. Por defecto es localhost.</p>
 <p><strong>7.    Puerto de la base de datos</strong> Define el puerto del servidor de la base de datos. Por defecto es 5432.</p>
 <p><strong>8.    Nombre de la base de datos</strong> Define el nombre de la base de datos. La base de datos debe existir con anterioridad.</p>

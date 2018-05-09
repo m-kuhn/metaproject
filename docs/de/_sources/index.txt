@@ -16,6 +16,7 @@ Contents
    get_started
    user-guide
    development
+   meta_attributes
 
 Translations
 ============
