@@ -171,7 +171,7 @@
 </div>
 <div class="section" id="introduction">
 <h2><a class="toc-backref" href="#id4">Einführung</a><a class="headerlink" href="#introduction" title="Link zu dieser Überschrift">¶</a></h2>
-<p>This document contains information about Project Generator usage for QGIS 3.</p>
+<p>Dieses Dokument enthält Informationen über die Benutzung des Projektgenerators für QGIS 3.</p>
 <p>Dies ist ein QGIS Plugin um mit wenigen Klicks ein QGIS Projekt von einem existierenden Datenmodell erstellen.</p>
 <p>QGIS Layer und Formulare manuell zu Konfigurieren ist eine mühsame und fehleranfällige Aufgabe. Dieses Plugin lädt Datenbankschemen mit verschiedenen Metadaten um die Legende, Widgetkonfigurationen, Relationen und mehr vorzukonfigurieren.</p>
 <p>Interlis Modelle beinhalten mehr Informationen als ein reines Datenbankschema. Dieses Pluging nutzt ili2pg um Interlis Modelle in eine PostgreSQL/PostGIS Datenbank zu importieren und nutzt die zusätzlichen Metainformationen um die Nutzerschnittstelle besser zu gestalten.</p>
@@ -192,18 +192,20 @@ You could get rid of Custom Model Directories and model names and use Interlis m
 You can set the CRS you want to use for geometry tables defined in your Interlis models. CRS information will be stored into PostgreSQL/PostGIS.</p>
 <p><strong>5.    Advanced options (only for Interlis mode)</strong>
 Since Project Generator uses ili2db when in Interlis mode, you can set advanced options that determine how your conceptual object-oriented model is mapped into a PostgreSQL/PostGIS  relational model.</p>
-<p><strong>*Inheritance*</strong></p>
+<p><strong>*Vererbung*</strong></p>
 <p>ili2db stellt drei Typen von Vererbungsstrategien zur Verfügung: &#8220;noSmartMapping&#8221;, &#8220;smart1inheritance&#8221; und &#8220;smart2inheritance&#8221;:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p class="first"><strong>noSmartMapping</strong> Diese Vererbungsstrategie bildet alle Klassen vom Quellinterlismodell unverändert in der Zieldatenbank ab. Jede Klasse behält all ihre Attribute.</p>
 </li>
-<li><strong>smart1inheritance</strong> This kind of inheritance prefers to create parent classes into the database, as long as they fulfill some specific requirements. Attributes from children classes will not be lost, since they are transferred into parent ones.</li>
-<li><strong>smart2inheritance</strong> This kind of inheritance prefers to create children classes into the database. Attribute from parent classes will not be lost, since they are transferred into children ones.</li>
+<li><p class="first"><strong>smart1inheritance</strong> Diese Vererbungsstrategie bevorzugt das Erstellen von Parent-Klassen in der Datenbank, solange sie gewisse Anforderungen erfüllen. Attribute von Child-Klassen werden nicht verloren gehen, da sie in die Parent-Klassen transferiert werden.</p>
+</li>
+<li><p class="first"><strong>smart2inheritance</strong> Diese Vererbungsstrategie bevorzugt das Erstellen von Child-Klassen in der Datenbank. Attribute von Parent-Klassen werden nicht verloren gehen, da sie in die Child-Llassen transferiert werden.</p>
+</li>
 </ul>
 </div></blockquote>
 <p><strong>*Extra Model Information File*</strong></p>
-<p>A *.toml file containing values for meta attributes (like dispExpression) instead of having them directly in the Interlis file. The file can be selected per model configuration.</p>
+<p>Ein *.toml File, das Werte für Metaattribute (wie zBs. dispExpression) enthält, anstelle dass diese direkt im Interlis File gespeichert sind. Dieses File kann pro Model konfiguriert werden.</p>
 <p><strong>6.    Database Host</strong>
 Set the host of the database server. By default is localhost.</p>
 <p><strong>7.    Database Port</strong>
