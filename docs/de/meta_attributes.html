@@ -88,14 +88,14 @@
 <li><a class="reference internal" href="#">Metaattribute</a><ul>
 <li><a class="reference internal" href="#general">Allgemein</a><ul>
 <li><a class="reference internal" href="#meta-attributes-in-interlis-files">Metaattributes in Interlis Files</a><ul>
-<li><a class="reference internal" href="#comment-vs-meta-attribute">Comment vs. Meta Attribute</a></li>
+<li><a class="reference internal" href="#comment-vs-meta-attribute">Kommentare vs. Attribute</a></li>
 <li><a class="reference internal" href="#syntax">Syntax</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#meta-attributes-in-the-database">Metaattribute in der Datenbank</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#project-generator-specific-meta-attributes">Project Generator Specific Meta Attributes</a><ul>
+<li><a class="reference internal" href="#project-generator-specific-meta-attributes">Spezifische Projektgenerator-Metaattribute</a><ul>
 <li><a class="reference internal" href="#list-of-specific-attributes">Liste spezifischer Attribute</a></li>
 </ul>
 </li>
@@ -166,14 +166,14 @@
 <li><a class="reference internal" href="#meta-attributes" id="id4">Metaattribute</a><ul>
 <li><a class="reference internal" href="#general" id="id5">Allgemein</a><ul>
 <li><a class="reference internal" href="#meta-attributes-in-interlis-files" id="id6">Metaattributes in Interlis Files</a><ul>
-<li><a class="reference internal" href="#comment-vs-meta-attribute" id="id7">Comment vs. Meta Attribute</a></li>
+<li><a class="reference internal" href="#comment-vs-meta-attribute" id="id7">Kommentare vs. Attribute</a></li>
 <li><a class="reference internal" href="#syntax" id="id8">Syntax</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#meta-attributes-in-the-database" id="id9">Metaattribute in der Datenbank</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#project-generator-specific-meta-attributes" id="id10">Project Generator Specific Meta Attributes</a><ul>
+<li><a class="reference internal" href="#project-generator-specific-meta-attributes" id="id10">Spezifische Projektgenerator-Metaattribute</a><ul>
 <li><a class="reference internal" href="#list-of-specific-attributes" id="id11">Liste spezifischer Attribute</a></li>
 </ul>
 </li>
@@ -191,12 +191,12 @@
 <div class="section" id="meta-attributes-in-interlis-files">
 <h3><a class="toc-backref" href="#id6">Metaattributes in Interlis Files</a><a class="headerlink" href="#meta-attributes-in-interlis-files" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="section" id="comment-vs-meta-attribute">
-<h4><a class="toc-backref" href="#id7">Comment vs. Meta Attribute</a><a class="headerlink" href="#comment-vs-meta-attribute" title="Link zu dieser Überschrift">¶</a></h4>
-<p>An Interlis comment starts with <code class="docutils literal"><span class="pre">!!</span></code> and ends with a line end. A meta attribute starts with <code class="docutils literal"><span class="pre">!!</span></code> as well but followed by an <code class="docutils literal"><span class="pre">&#64;</span></code>:</p>
+<h4><a class="toc-backref" href="#id7">Kommentare vs. Attribute</a><a class="headerlink" href="#comment-vs-meta-attribute" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Ein Interlis Kommentar startet mit <code class="docutils literal"><span class="pre">!!</span></code> und endet mit einem Linienende. Ein Metaattribut startet ebenfalls mit <code class="docutils literal"><span class="pre">!!</span></code> allerdings gefolgt von einem <code class="docutils literal"><span class="pre">&#64;</span></code>:</p>
 </div>
 <div class="section" id="syntax">
 <h4><a class="toc-backref" href="#id8">Syntax</a><a class="headerlink" href="#syntax" title="Link zu dieser Überschrift">¶</a></h4>
-<p>After the start of <code class="docutils literal"><span class="pre">!!&#64;</span></code> the meta attribute name follows, then equal <code class="docutils literal"><span class="pre">=</span></code>, then the attribute value:</p>
+<p>Nach dem Start von <code class="docutils literal"><span class="pre">!!&#64;</span></code> folgt der Attributname, dann ein Gleichheitszeichen <code class="docutils literal"><span class="pre">=</span></code> und dann der Attributwert.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>!!@&lt;name&gt;=&lt;value&gt;
 </pre></div>
 </div>
@@ -239,12 +239,11 @@
 </div>
 </div>
 <div class="section" id="project-generator-specific-meta-attributes">
-<h2><a class="toc-backref" href="#id10">Project Generator Specific Meta Attributes</a><a class="headerlink" href="#project-generator-specific-meta-attributes" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><a class="toc-backref" href="#id10">Spezifische Projektgenerator-Metaattribute</a><a class="headerlink" href="#project-generator-specific-meta-attributes" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Einige nicht-standard Metaattibute werden vom Projektgenerator als Eigenschaften im QGIS-Projekt interpretiert.</p>
 <div class="section" id="list-of-specific-attributes">
 <h3><a class="toc-backref" href="#id11">Liste spezifischer Attribute</a><a class="headerlink" href="#list-of-specific-attributes" title="Link zu dieser Überschrift">¶</a></h3>
-<p><strong>dispExpression</strong>
-Used as the display expression for a layer. The display expression is the <em>name</em> that is used to identify a feature by text. One of the places where this is used is the combobox that is shown for a Relation Reference Widget on feature forms.</p>
+<p><strong>dispExpression</strong> wird als Anzeigeausdruck für einen Layer benutzt. Der Anzeigeausdruck definiert den <em>Namen</em>, der verwendet wird, wann immer ein Feature mit Text dargestellt werden muss. Beispielsweise in der Auswahlliste für das Beziehungsreferenzwidget auf Attributformularen.</p>
 <p><a href="#id2"><span class="problematic" id="id3">|relation_reference|</span></a></p>
 </div>
 </div>
@@ -252,8 +251,8 @@ Used as the display expression for a layer. The display expression is the <em>na
 <h2><a class="toc-backref" href="#id12">Extra Model Information File</a><a class="headerlink" href="#extra-model-information-file" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die Metaattribute können anstatt direkt im Interlis File, in diesen externen Files gespeichert sein.</p>
 <p>Diese Files sind in TOML geschrieben haben die Dateierweiterung <code class="docutils literal"><span class="pre">.toml</span></code></p>
-<p>You can select the extra meta attribute files in the <strong>Advanced Options</strong>. This configuration is stored for the model. This means when you reselect the same model later again, the file is still referenced. This information will be displayed on the main dialog of the Project Generator.</p>
-<p>In the background ili2pg writes the meta attributes from the external meta attribute file to the PostGIS or GeoPackage storage, where the Project Generator can use them to build the QGIS project.</p>
+<p>Extra Model Information Dateien können in den &#8220;Erweiterten Optionen&#8221; ausgewählt werden. Diese Konfiguration wird pro Model abgespeichert, was bedeutet, dass wenn man das Model später erneut auswählt, die Datei noch immer verknüpft ist. Diese Information wird auch im Hauptfenster des Projektgenerators angezeigt.</p>
+<p>Im Hintergrund schreibt ili2pg das Attribute von der Extra Model Information Datei in den PostGIS- oder GeoPackage-Speicher. Von dort kann es der Projektgenerater beim Erstellen des QGIS-Projektes verwenden.</p>
 <p><strong>Beispiel</strong></p>
 <div class="literal-block-wrapper docutils container" id="exceptionalloadsroute-toml">
 <div class="code-block-caption"><span class="caption-text">ExceptionalLoadsRoute.toml</span><a class="headerlink" href="#exceptionalloadsroute-toml" title="Link zu diesem Quellcode">¶</a></div>
@@ -262,7 +261,7 @@ Used as the display expression for a layer. The display expression is the <em>na
 </pre></div>
 </div>
 </div>
-<p><strong>More complex example</strong></p>
+<p><strong>Komplexes Beispiel</strong></p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">ExceptionalLoadsRoute.toml</span><a class="headerlink" href="#id1" title="Link zu diesem Quellcode">¶</a></div>
 <div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[&quot;ExceptionalLoadsCatalogues_V1.TypeOfRouteCatalogue.TypeOfRoute&quot;]</span>
@@ -270,7 +269,7 @@ Used as the display expression for a layer. The display expression is the <em>na
 </pre></div>
 </div>
 </div>
-<p>The keys that need to be used for the TOML sections are the <em>fully qualified Interlis names</em> of the objects. In the example above this is <code class="docutils literal"><span class="pre">[&quot;ExceptionalLoadsCatalogues_V1.TypeOfRouteCatalogue.TypeOfRoute&quot;]</span></code>. A list of all available names can be found in the database table <code class="docutils literal"><span class="pre">t_ili2db_classname</span></code> after doing a schema import.</p>
+<p>Die Schlüssel, die für die TOML Sektionen verwendet werden sind &#8220;vollständig qualifizierte Interlisnamen&#8221; der Objekte. Im Beispiel oben ist dies <code class="docutils literal"><span class="pre">[&quot;ExceptionalLoadsCatalogues_V1.TypeOfRouteCatalogue.TypeOfRoute&quot;]</span></code>. Eine Liste von verfügbaren Namen kann in der Datenbanktabelle <code class="docutils literal"><span class="pre">t_ili2db_classname</span></code> gefunden werden, nachdem ein Schemaimport gemacht wurde.</p>
 </div>
 </div>
 
