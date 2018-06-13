@@ -96,7 +96,7 @@ In the background ili2pg writes the meta attributes from the external meta attri
 	["ExceptionalLoadsRoute.TypeOfRouteCatalogue.TypeOfRoute"]
 	dispExpression="type"
 	
-**More complex example**
+**Mor complex example**
 ::
 
 	["ExceptionalLoadsCatalogues_V1.TypeOfRouteCatalogue.TypeOfRoute"]
