@@ -91,7 +91,7 @@
 <li><a class="reference internal" href="#meta-attributes-in-the-database">Meta Attributes in the Database</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#project-generator-specific-attributes">Project Generator Specific Attributes</a><ul>
+<li><a class="reference internal" href="#project-generator-specific-meta-attributes">Project Generator Specific Meta Attributes</a><ul>
 <li><a class="reference internal" href="#list-of-specific-attributes">List of specific Attributes</a></li>
 </ul>
 </li>
@@ -165,7 +165,7 @@
 <li><a class="reference internal" href="#meta-attributes-in-the-database" id="id6">Meta Attributes in the Database</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#project-generator-specific-attributes" id="id7">Project Generator Specific Attributes</a><ul>
+<li><a class="reference internal" href="#project-generator-specific-meta-attributes" id="id7">Project Generator Specific Meta Attributes</a><ul>
 <li><a class="reference internal" href="#list-of-specific-attributes" id="id8">List of specific Attributes</a></li>
 </ul>
 </li>
@@ -181,10 +181,10 @@
 <p>Translated from source: <a class="reference external" href="https://www.ech.ch/alfresco/s/ech/download?nodeid=788eb38a-bf2b-4f3d-96a8-addc37bba41f">STAN_d_DEF_2011-06-22_eCH-0117 Meta-Attribute für INTERLIS-Modelle.pdf</a> (German) from eCH www.interlis.ch</p>
 <div class="section" id="meta-attributes-in-interlis-files">
 <h3><a class="toc-backref" href="#id5">Meta Attributes in Interlis Files</a><a class="headerlink" href="#meta-attributes-in-interlis-files" title="Enlazar permanentemente con este título">¶</a></h3>
-<p><strong>Comment vs. Attribute</strong></p>
-<p>An Interlis comment starts with <code class="docutils literal"><span class="pre">!!</span></code> and ends with a line end. An attribute starts with <code class="docutils literal"><span class="pre">!!</span></code> as well but followed by an <code class="docutils literal"><span class="pre">&#64;</span></code>:</p>
+<p><strong>Comment vs. Meta Attribute</strong></p>
+<p>An Interlis comment starts with <code class="docutils literal"><span class="pre">!!</span></code> and ends with a line end. A meta attribute starts with <code class="docutils literal"><span class="pre">!!</span></code> as well but followed by an <code class="docutils literal"><span class="pre">&#64;</span></code>:</p>
 <p><strong>Syntax</strong></p>
-<p>After the start of <code class="docutils literal"><span class="pre">!!&#64;</span></code> the attribute name follows, then equal, then the attribute value:</p>
+<p>After the start of <code class="docutils literal"><span class="pre">!!&#64;</span></code> the meta attribute name follows, then equal <code class="docutils literal"><span class="pre">=</span></code>, then the attribute value:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>!!@&lt;name&gt;=&lt;value&gt;
 </pre></div>
 </div>
@@ -238,13 +238,13 @@ VERSION &quot;2017-02-08&quot;  =
 </table>
 </div>
 </div>
-<div class="section" id="project-generator-specific-attributes">
-<h2><a class="toc-backref" href="#id7">Project Generator Specific Attributes</a><a class="headerlink" href="#project-generator-specific-attributes" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="project-generator-specific-meta-attributes">
+<h2><a class="toc-backref" href="#id7">Project Generator Specific Meta Attributes</a><a class="headerlink" href="#project-generator-specific-meta-attributes" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Some additional non standard meta attributes are understood by the project generator as properties in the QGIS project.</p>
 <div class="section" id="list-of-specific-attributes">
 <h3><a class="toc-backref" href="#id8">List of specific Attributes</a><a class="headerlink" href="#list-of-specific-attributes" title="Enlazar permanentemente con este título">¶</a></h3>
 <p><strong>dispExpression</strong>
-Used as the display expression of a Relation Reference Widget.</p>
+Used as the display expression for a layer. The display expression is the <em>name</em> that is used to identify a feature by text. One of the places where this is used is the combobox that is shown for a Relation Reference Widget on feature forms.</p>
 <p><a href="#id1"><span class="problematic" id="id2">|relation_reference|</span></a></p>
 </div>
 </div>
@@ -252,18 +252,19 @@ Used as the display expression of a Relation Reference Widget.</p>
 <h2><a class="toc-backref" href="#id9">Extra Model Information File</a><a class="headerlink" href="#extra-model-information-file" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>In these external files the meta attributes can be stored instead of having them directly in the Interlis files.</p>
 <p>These files are written in TOML and have the filename extension <code class="docutils literal"><span class="pre">.toml</span></code></p>
-<p>You can select the extra meta attribute files in the <strong>Advanced Options</strong>. This configuration is stored for the model. Means when you reselect the model later again, the file is still referenced. This information will be displayed on the main dialog of the Project Generator.</p>
-<p>In the background ili2pg writes the attributes from the external meta attribute file to the PostGIS or GeoPackage storage, where the Project Generator can use them to build the QGIS project.</p>
+<p>You can select the extra meta attribute files in the <strong>Advanced Options</strong>. This configuration is stored for the model. This means when you reselect the same model later again, the file is still referenced. This information will be displayed on the main dialog of the Project Generator.</p>
+<p>In the background ili2pg writes the meta attributes from the external meta attribute file to the PostGIS or GeoPackage storage, where the Project Generator can use them to build the QGIS project.</p>
 <p><strong>Example</strong></p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s2">&quot;ExceptionalLoadsCatalogues_V1.TypeOfRouteCatalogue.TypeOfRoute&quot;</span><span class="p">]</span>
-<span class="n">dispExpression</span><span class="o">=</span><span class="s2">&quot;CONCAT(type, &#39; sometext&#39;)&quot;</span>
-</pre></div>
-</div>
-<p><strong>More simple example</strong></p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s2">&quot;ExceptionalLoadsRoute.TypeOfRouteCatalogue.TypeOfRoute&quot;</span><span class="p">]</span>
 <span class="n">dispExpression</span><span class="o">=</span><span class="s2">&quot;type&quot;</span>
 </pre></div>
 </div>
+<p><strong>More complex example</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s2">&quot;ExceptionalLoadsCatalogues_V1.TypeOfRouteCatalogue.TypeOfRoute&quot;</span><span class="p">]</span>
+<span class="n">dispExpression</span><span class="o">=</span><span class="s2">&quot;CONCAT(type, &#39; sometext&#39;)&quot;</span>
+</pre></div>
+</div>
+<p>The keys that need to be used for the TOML sections are the <em>fully qualified Interlis names</em> of the objects. In the example above this is <code class="docutils literal"><span class="pre">[&quot;ExceptionalLoadsCatalogues_V1.TypeOfRouteCatalogue.TypeOfRoute&quot;]</span></code>. A list of all available names can be found in the database table <code class="docutils literal"><span class="pre">t_ili2db_classname</span></code> after doing a schema import.</p>
 </div>
 </div>
 
