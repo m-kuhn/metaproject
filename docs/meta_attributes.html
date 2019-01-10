@@ -269,6 +269,17 @@ Used as the display expression for a layer. The display expression is the <em>na
 </div>
 </div>
 <p>The keys that need to be used for the TOML sections are the <em>fully qualified Interlis names</em> of the objects. In the example above this is <code class="docutils literal"><span class="pre">[&quot;ExceptionalLoadsCatalogues_V1.TypeOfRouteCatalogue.TypeOfRoute&quot;]</span></code>. A list of all available names can be found in the database table <code class="docutils literal"><span class="pre">t_ili2db_classname</span></code> after doing a schema import.</p>
+<p><strong>Ili example</strong></p>
+<p>The above example would be written as follows directly in an ili file. If the above configuration is in the ini file, the ili meta attribute is no longer required, this is only here for reference.</p>
+<div class="literal-block-wrapper docutils container" id="exceptionalloadsroute-ili">
+<div class="code-block-caption"><span class="caption-text">ExceptionalLoadsRoute.ili</span><a class="headerlink" href="#exceptionalloadsroute-ili" title="Permalink to this code">¶</a></div>
+<div class="highlight-ili"><div class="highlight"><pre><span></span>!!@dispExpression=&quot;type&quot;
+CLASS TypeOfRoute=
+  type: MANDATORY TEXT*25;
+END TypeOfRoute;
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 

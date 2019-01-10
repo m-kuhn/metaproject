@@ -111,3 +111,15 @@ In the background ili2pg writes the meta attributes from the external meta attri
     dispExpression="CONCAT(type, ' sometext')"
 
 The keys that need to be used for the TOML sections are the *fully qualified Interlis names* of the objects. In the example above this is ``["ExceptionalLoadsCatalogues_V1.TypeOfRouteCatalogue.TypeOfRoute"]``. A list of all available names can be found in the database table ``t_ili2db_classname`` after doing a schema import.
+
+**Ili example**
+
+The above example would be written as follows directly in an ili file. If the above configuration is in the ini file, the ili meta attribute is no longer required, this is only here for reference.
+
+.. code-block:: ili
+  :caption: ExceptionalLoadsRoute.ili
+  
+  !!@dispExpression="type"
+  CLASS TypeOfRoute=
+    type: MANDATORY TEXT*25;
+  END TypeOfRoute;
