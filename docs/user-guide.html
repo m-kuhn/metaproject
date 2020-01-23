@@ -1,32 +1,21 @@
 
 <!DOCTYPE html>
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>User guide for the QGIS Project Generator &mdash; QGIS Model Baker Documentation 1.0 documentation</title>
-    
+    <meta charset="utf-8" />
+    <title>User guide for the QGIS Project Generator &#8212; QGIS Model Baker Documentation 1.0 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/style.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
+    <link rel="stylesheet" type="text/css" href="_static/style.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <script type="text/javascript" src="_static/logo.js"></script>
-    <link rel="shortcut icon" href="_static/QgisModelBaker-logo-noborder.ico"/>
-    <link rel="top" title="QGIS Model Baker Documentation 1.0 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Development" href="development.html" />
     <link rel="prev" title="Get Started" href="get_started.html" />
 <meta charset='utf-8'>
@@ -38,8 +27,7 @@
 <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
 <script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
 
-  </head>
-  <body role="document">
+  </head><body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -50,7 +38,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html"><span><img src="_static/QgisModelBaker-logo.svg"></span>
+        <a class="navbar-brand" href="index.html">
           QGIS Model Baker Documentation</a>
         <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
       </div>
@@ -69,7 +57,7 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="get_started.html">Get Started</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">User guide for the QGIS Project Generator</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User guide for the QGIS Project Generator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="meta_attributes.html">Meta Attributes</a></li>
 </ul>
@@ -130,7 +118,7 @@
     </div>
   </div>
 
-<div class="container"><span class="shadow-background"><img src="_static/QgisModelBaker-logo.svg"></span>
+<div class="container">
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><li class="dropdown globaltoc-container">
@@ -143,7 +131,7 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="get_started.html">Get Started</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">User guide for the QGIS Project Generator</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User guide for the QGIS Project Generator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="meta_attributes.html">Meta Attributes</a></li>
 </ul>
@@ -156,14 +144,15 @@
   <div class="section" id="user-guide-for-the-qgis-project-generator">
 <h1><a class="toc-backref" href="#id1">User guide for the QGIS Project Generator</a><a class="headerlink" href="#user-guide-for-the-qgis-project-generator" title="Permalink to this headline">¶</a></h1>
 <div class="contents topic" id="contents">
-<p class="topic-title first">Contents</p>
+<p class="topic-title">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#user-guide-for-the-qgis-project-generator" id="id1">User guide for the QGIS Project Generator</a><ul>
-<li><a class="reference internal" href="#introduction" id="id2">Introduction</a></li>
-<li><a class="reference internal" href="#generate-project" id="id3">Generate Project</a></li>
-<li><a class="reference internal" href="#import-an-interlis-transfer-file-xtf" id="id4">Import an Interlis Transfer File (.xtf)</a></li>
-<li><a class="reference internal" href="#export-an-interlis-transfer-file-xtf" id="id5">Export an Interlis Transfer File (.xtf)</a></li>
-<li><a class="reference internal" href="#plugin-configuration" id="id6">Plugin Configuration</a></li>
+<li><p><a class="reference internal" href="#user-guide-for-the-qgis-project-generator" id="id1">User guide for the QGIS Project Generator</a></p>
+<ul>
+<li><p><a class="reference internal" href="#introduction" id="id2">Introduction</a></p></li>
+<li><p><a class="reference internal" href="#generate-project" id="id3">Generate Project</a></p></li>
+<li><p><a class="reference internal" href="#import-an-interlis-transfer-file-xtf" id="id4">Import an Interlis Transfer File (.xtf)</a></p></li>
+<li><p><a class="reference internal" href="#export-an-interlis-transfer-file-xtf" id="id5">Export an Interlis Transfer File (.xtf)</a></p></li>
+<li><p><a class="reference internal" href="#plugin-configuration" id="id6">Plugin Configuration</a></p></li>
 </ul>
 </li>
 </ul>
@@ -182,7 +171,7 @@
 <p><img alt="generate" src="_images/generate.png" /></p>
 <p><strong>1.    Generation Mode</strong>
 Project Generator is able to generate QGIS projects from both Interlis models or PostgreSQL/PostGIS existing schemas. You should start using this list to choose what mode you want the plugin to work on.</p>
-<p>If you choose <cite>Interlis</cite> Project Generator employs ili2pg under the hood to convert your (conceptual) Interlis models into phisical ones stored in PostgreSQL/PostGIS. As long as you have Internet access when you first run the plugin, you shouldn&#8217;t care about installing ili2pg, since Project Generator will download it and place it in a plugin&#8217;s subfolder.</p>
+<p>If you choose <cite>Interlis</cite> Project Generator employs ili2pg under the hood to convert your (conceptual) Interlis models into phisical ones stored in PostgreSQL/PostGIS. As long as you have Internet access when you first run the plugin, you shouldn’t care about installing ili2pg, since Project Generator will download it and place it in a plugin’s subfolder.</p>
 <p>If, on the contrary, you choose <cite>PostGIS</cite>, Project Generator uses a PostgreSQL/PostGIS schema to generate your QGIS project. This option allows you to reconstruct a QGIS project from Interlis models, even if they were already converted into phisical models. Note that you could eventually use the plugin for generating QGIS projects from your PostgreSQL/PostGIS schemas, even if they are not related to Interlis in any way, however, Project Generator exploits Interlis expresiveness and we suggest you to use it with Interlis-based models.</p>
 <p><strong>2.    Interlis Model (only for Interlis mode)</strong>
 Based on the Custom Model Directories you set in Plugin Configuration (link), you can choose what models you want to convert into a PostgreSQL/PostGIS schema. Model names are specified in interlis model (ili) files. An ili file can contain a number of models. Since model names should be given strictly as they were spelled in Interlis files, once you start typing, autocompletion will help you discover available models with their correct spelling.</p>
@@ -193,12 +182,12 @@ You can set the CRS you want to use for geometry tables defined in your Interlis
 <p><strong>5.    Advanced options (only for Interlis mode)</strong>
 Since Project Generator uses ili2db when in Interlis mode, you can set advanced options that determine how your conceptual object-oriented model is mapped into a PostgreSQL/PostGIS  relational model.</p>
 <p><strong>*Inheritance*</strong></p>
-<p>ili2db allows you to use three types of inheritance mapping: &#8220;noSmartMapping&#8221;, &#8220;smart1inheritance&#8221; and &#8220;smart2inheritance&#8221;:</p>
+<p>ili2db allows you to use three types of inheritance mapping: “noSmartMapping”, “smart1inheritance” and “smart2inheritance”:</p>
 <blockquote>
 <div><ul class="simple">
-<li><strong>noSmartMapping</strong> This kind of inheritance maps all classes from the source Interlis model into the target database schema. Each class mantains all its attributes.</li>
-<li><strong>smart1inheritance</strong> This kind of inheritance prefers to create parent classes into the database, as long as they fulfill some specific requirements. Attributes from children classes will not be lost, since they are transferred into parent ones.</li>
-<li><strong>smart2inheritance</strong> This kind of inheritance prefers to create children classes into the database. Attribute from parent classes will not be lost, since they are transferred into children ones.</li>
+<li><p><strong>noSmartMapping</strong> This kind of inheritance maps all classes from the source Interlis model into the target database schema. Each class mantains all its attributes.</p></li>
+<li><p><strong>smart1inheritance</strong> This kind of inheritance prefers to create parent classes into the database, as long as they fulfill some specific requirements. Attributes from children classes will not be lost, since they are transferred into parent ones.</p></li>
+<li><p><strong>smart2inheritance</strong> This kind of inheritance prefers to create children classes into the database. Attribute from parent classes will not be lost, since they are transferred into children ones.</p></li>
 </ul>
 </div></blockquote>
 <p><strong>*Extra Model Information File*</strong></p>
@@ -210,7 +199,7 @@ Set the port of the database server. By default is 5432.</p>
 <p><strong>8.    Database Name</strong>
 Set the database name. The database should exist already.</p>
 <p><strong>9.    Database Schema</strong>
-Set the database schema where you want to create the phisical model. The schema acts like a folder, it helps you to organize database objects like tables and relations and isolate them from other schemas. If you don&#8217;t specify a database schema, Project Generator will create a schema for you, whose name will correspond to the database name. You can even choose an existing schema, but you&#8217;d better know what you&#8217;re doing, because it will overwrite previous ili2db configurations.</p>
+Set the database schema where you want to create the phisical model. The schema acts like a folder, it helps you to organize database objects like tables and relations and isolate them from other schemas. If you don’t specify a database schema, Project Generator will create a schema for you, whose name will correspond to the database name. You can even choose an existing schema, but you’d better know what you’re doing, because it will overwrite previous ili2db configurations.</p>
 <p><strong>10.   Database User</strong>
 Set the user to access the database.</p>
 <p><strong>11.   User Password</strong>
@@ -273,19 +262,19 @@ This panel shows log messages of the whole process once Export button is clicked
 <p>To start using the plugin, go to menu Database -&gt; Project Generator -&gt; Settings, where you can set:</p>
 <blockquote>
 <div><ul>
-<li><p class="first"><strong>Custom Model Directories</strong>:</p>
+<li><p><strong>Custom Model Directories</strong>:</p>
 <p>In this window you can set one or several paths to let ili2db where to find your Interlis models (ili files). Paths can be both local directories or URLs to remote model repositories. Several paths should be separated by semicolons.</p>
 <p>By default, ili2db uses <cite>%ILI_FROM_DB;%XTF_DIR;http://models.interlis.ch/;%JAR_DIR</cite>, where:</p>
 <blockquote>
 <div><ul class="simple">
-<li><cite>%ILI_FROM_DB</cite> is a placeholder for the models in the database (in table t_ili2db_model),</li>
-<li><cite>%XTF_DIR</cite> is a placeholder for the directory with the transfer file,</li>
-<li><cite>%JAR_DIR</cite> is a placeholder for the ili2db program (ili2pg.jar or ili2gpkg.jar file).</li>
+<li><p><cite>%ILI_FROM_DB</cite> is a placeholder for the models in the database (in table t_ili2db_model),</p></li>
+<li><p><cite>%XTF_DIR</cite> is a placeholder for the directory with the transfer file,</p></li>
+<li><p><cite>%JAR_DIR</cite> is a placeholder for the ili2db program (ili2pg.jar or ili2gpkg.jar file).</p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first"><strong>Java Path</strong>:</p>
-<p>By default, Project Generator searches for Java executable in <cite>%JAVA_HOME</cite> environment variable. However, you can overwrite such behavior by setting a custom path to Java executable file in this window. This is useful, for instance, when environment variables are not well set and you have no rights to set them in your machine&#8217;s operating system.</p>
+<li><p><strong>Java Path</strong>:</p>
+<p>By default, Project Generator searches for Java executable in <cite>%JAVA_HOME</cite> environment variable. However, you can overwrite such behavior by setting a custom path to Java executable file in this window. This is useful, for instance, when environment variables are not well set and you have no rights to set them in your machine’s operating system.</p>
 </li>
 </ul>
 </div></blockquote>
@@ -294,16 +283,14 @@ This panel shows log messages of the whole process once Export button is clicked
 <p><img alt="settings_3" src="_images/settings_3.png" /></p>
 <p><img alt="settings_4" src="_images/settings_4.png" /></p>
 <p><img alt="settings_5" src="_images/settings_5.png" /></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Author:</th><td class="field-body">Sergio Ramírez, Germán Carrillo</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Date:</th><td class="field-body">Aug 24, 2017</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>Sergio Ramírez, Germán Carrillo</p>
+</dd>
+<dt class="field-even">Date</dt>
+<dd class="field-even"><p>Aug 24, 2017</p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -320,7 +307,7 @@ This panel shows log messages of the whole process once Export button is clicked
         <br/>
         
 
-
+ 
 
 
 <div id="sourcelink">
@@ -332,7 +319,7 @@ This panel shows log messages of the whole process once Export button is clicked
     </p>
     <p>
         &copy; Copyright 2017, The QGIS Model Baker Project/OPENGIS.ch.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.<br/>
     </p>
   </div>
 </footer>

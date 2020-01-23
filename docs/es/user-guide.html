@@ -1,33 +1,22 @@
 
 <!DOCTYPE html>
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Guía de usuario para el plugin de QGIS Project Generator &mdash; documentación de QGIS Model Baker Documentation - 1.0</title>
-    
+    <meta charset="utf-8" />
+    <title>Guía de usuario para el plugin de QGIS Project Generator &#8212; documentación de QGIS Model Baker Documentation - 1.0</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/style.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
+    <link rel="stylesheet" type="text/css" href="_static/style.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="_static/logo.js"></script>
-    <link rel="shortcut icon" href="_static/QgisModelBaker-logo-noborder.ico"/>
-    <link rel="top" title="documentación de QGIS Model Baker Documentation - 1.0" href="index.html" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
     <link rel="next" title="Desarrollo" href="development.html" />
     <link rel="prev" title="Para iniciar" href="get_started.html" />
 <meta charset='utf-8'>
@@ -39,8 +28,7 @@
 <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
 <script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
 
-  </head>
-  <body role="document">
+  </head><body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -51,7 +39,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html"><span><img src="_static/QgisModelBaker-logo.svg"></span>
+        <a class="navbar-brand" href="index.html">
           QGIS Model Baker Documentation</a>
         <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
       </div>
@@ -70,7 +58,7 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="get_started.html">Para iniciar</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Guía de usuario para el plugin de QGIS Project Generator</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Guía de usuario para el plugin de QGIS Project Generator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Desarrollo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="meta_attributes.html">Meta Attributes</a></li>
 </ul>
@@ -131,7 +119,7 @@
     </div>
   </div>
 
-<div class="container"><span class="shadow-background"><img src="_static/QgisModelBaker-logo.svg"></span>
+<div class="container">
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><li class="dropdown globaltoc-container">
@@ -144,7 +132,7 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="get_started.html">Para iniciar</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Guía de usuario para el plugin de QGIS Project Generator</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Guía de usuario para el plugin de QGIS Project Generator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Desarrollo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="meta_attributes.html">Meta Attributes</a></li>
 </ul>
@@ -156,15 +144,16 @@
       
   <div class="section" id="user-guide-for-the-qgis-project-generator">
 <h1><a class="toc-backref" href="#id1">Guía de usuario para el plugin de QGIS Project Generator</a><a class="headerlink" href="#user-guide-for-the-qgis-project-generator" title="Enlazar permanentemente con este título">¶</a></h1>
-<div class="contents topic" id="contents">
-<p class="topic-title first">Contents</p>
+<div class="contents topic" id="contenido">
+<p class="topic-title">Contenido</p>
 <ul class="simple">
-<li><a class="reference internal" href="#user-guide-for-the-qgis-project-generator" id="id1">Guía de usuario para el plugin de QGIS Project Generator</a><ul>
-<li><a class="reference internal" href="#introduction" id="id2">Introducción</a></li>
-<li><a class="reference internal" href="#generate-project" id="id3">Generar Proyecto</a></li>
-<li><a class="reference internal" href="#import-an-interlis-transfer-file-xtf" id="id4">Importar un archivo de transferencia de Interlis (.xtf)</a></li>
-<li><a class="reference internal" href="#export-an-interlis-transfer-file-xtf" id="id5">Exportar un archivo de transferencia de Interlis (.xtf)</a></li>
-<li><a class="reference internal" href="#plugin-configuration" id="id6">Configuración del Plugin</a></li>
+<li><p><a class="reference internal" href="#user-guide-for-the-qgis-project-generator" id="id1">Guía de usuario para el plugin de QGIS Project Generator</a></p>
+<ul>
+<li><p><a class="reference internal" href="#introduction" id="id2">Introducción</a></p></li>
+<li><p><a class="reference internal" href="#generate-project" id="id3">Generar Proyecto</a></p></li>
+<li><p><a class="reference internal" href="#import-an-interlis-transfer-file-xtf" id="id4">Importar un archivo de transferencia de Interlis (.xtf)</a></p></li>
+<li><p><a class="reference internal" href="#export-an-interlis-transfer-file-xtf" id="id5">Exportar un archivo de transferencia de Interlis (.xtf)</a></p></li>
+<li><p><a class="reference internal" href="#plugin-configuration" id="id6">Configuración del Plugin</a></p></li>
 </ul>
 </li>
 </ul>
@@ -189,15 +178,12 @@
 <p><strong>4. Sistema de referencia de coordenadas - SRC (solo para el modo Interlis)</strong> Usted puede definir el SRC que desea usar para las gemetrías definidas en sus modelos de Interlis. La información de los SRC sera almacenada en PostgreSQL/PostGIS.</p>
 <p><strong>5. Opciones avanzadas (Solo para el modo Interlis)</strong>  Dado que Project Generator usa ili2db cuando se encuentra en modo interlis, usted puede definir las opciones avanzadas que determinan cómo su modelo conceptual orientado a objetos es mapeado dentro de un modelo relacional en PostgreSQL/PostGIS.</p>
 <p><strong>*Inheritance*</strong></p>
-<p>Ili2db le permite utilizar 3 tipos de mapeo de herencias: &#8220;Sin Mapeo&#8221;, &#8220;Herencia Tipo 1 (preferir clases padre)&#8221; y &#8220;Herencia Tipo 2 (preferir clases hijas)&#8221;:</p>
+<p>Ili2db le permite utilizar 3 tipos de mapeo de herencias: «Sin Mapeo», «Herencia Tipo 1 (preferir clases padre)» y «Herencia Tipo 2 (preferir clases hijas)»:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p class="first"><strong>noSmartMapping</strong> Este tipo de herencia mapea todas las clases desde el modelo de interlis fuente dentro del esquema objetivo de base de datos. Cada clase mantiene todos sus atributos.</p>
-</li>
-<li><p class="first"><strong>Herencia Tipo 1 (preferir clases padre)</strong> Este tipo de herencia prefiere crear las clases padre dentro de la base de datos, siempre y cuando cumplan con algunos requerimientos especificos. Los atributos de las clases hijas no se perderán, éstos serán transferidos dentro de las clases padres.</p>
-</li>
-<li><p class="first"><strong>Herencia Tipo 2 (preferir clases hijas)</strong> Este tipo de herencia prefiere crear las clases hijas dentro de la base de datos. Los atributos de las clases padre no se perdarán, éstos se transferirán dentro de las clase hijas.</p>
-</li>
+<li><p><strong>noSmartMapping</strong> Este tipo de herencia mapea todas las clases desde el modelo de interlis fuente dentro del esquema objetivo de base de datos. Cada clase mantiene todos sus atributos.</p></li>
+<li><p><strong>Herencia Tipo 1 (preferir clases padre)</strong> Este tipo de herencia prefiere crear las clases padre dentro de la base de datos, siempre y cuando cumplan con algunos requerimientos especificos. Los atributos de las clases hijas no se perderán, éstos serán transferidos dentro de las clases padres.</p></li>
+<li><p><strong>Herencia Tipo 2 (preferir clases hijas)</strong> Este tipo de herencia prefiere crear las clases hijas dentro de la base de datos. Los atributos de las clases padre no se perdarán, éstos se transferirán dentro de las clase hijas.</p></li>
 </ul>
 </div></blockquote>
 <p><strong>*Extra Model Information File*</strong></p>
@@ -246,21 +232,18 @@
 <p>Para empezar a usar el plugin, vaya al menú Base de datos -&gt; Project Generator -&gt; Configuración, donde usted puede definir:</p>
 <blockquote>
 <div><ul>
-<li><p class="first"><strong>Rutas personalizadas a modelos</strong></p>
-<p>En esta ventana usted puede definir una o muchas rutas para permitir a ili2d encontrar sus modelos de interlis (archivos ili). Las rutas pueden tener tanto directorios locales o URLs a repositorios remotos de modelos. Cada ruta debe estar separada por punto y coma &#8221;;&#8221;.</p>
+<li><p><strong>Rutas personalizadas a modelos</strong></p>
+<p>En esta ventana usted puede definir una o muchas rutas para permitir a ili2d encontrar sus modelos de interlis (archivos ili). Las rutas pueden tener tanto directorios locales o URLs a repositorios remotos de modelos. Cada ruta debe estar separada por punto y coma «;».</p>
 <p>Por defecto, ili2db usa <cite>%ILI_FROM_DB;XTF_DIR;http://models.interlis.ch/;%JAR_DIR</cite>, donde:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p class="first"><cite>%ILI_FROM_DB</cite> es un marcador de posiciones para los modelos en la base de datos (en la tabla t_ili2db_model),</p>
-</li>
-<li><p class="first"><cite>XTF_DIR</cite> es un marcador de posición para el directorio con el archivo de transferencia,</p>
-</li>
-<li><p class="first"><cite>%JAR_DIR</cite> es un marcador de posición para el programa ili2db (archivo ili2pg.jar o ili2gpkg.jar).</p>
-</li>
+<li><p><cite>%ILI_FROM_DB</cite> es un marcador de posiciones para los modelos en la base de datos (en la tabla t_ili2db_model),</p></li>
+<li><p><cite>XTF_DIR</cite> es un marcador de posición para el directorio con el archivo de transferencia,</p></li>
+<li><p><cite>%JAR_DIR</cite> es un marcador de posición para el programa ili2db (archivo ili2pg.jar o ili2gpkg.jar).</p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first"><strong>Ruta Java</strong>:</p>
+<li><p><strong>Ruta Java</strong>:</p>
 <p>Por defecto, Project Generator busca ejecutables java en la variable de entorno <cite>%JAVA_HOME</cite>. Sin embargo, usted puede sobreescribir este parametro definiendo una ruta personalizada a un executable Java en esta ventana. Esto es muy útil, por ejemplo, cuando las variables de entorno no están bien definidas y usted no tiene permisos para definirla en el sistema operativo de su equipo.</p>
 </li>
 </ul>
@@ -270,17 +253,14 @@
 <p><img alt="settings_3" src="_images/settings_3.png" /></p>
 <p><img alt="settings_4" src="_images/settings_4.png" /></p>
 <p><img alt="settings_5" src="_images/settings_5.png" /></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Author:</th><td class="field-body">Sergio Ramírez, Germán Carrillo</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Date:</th><td class="field-body"><p class="first last">24 de Agosto, 2017</p>
-</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>Sergio Ramírez, Germán Carrillo</p>
+</dd>
+<dt class="field-even">Date</dt>
+<dd class="field-even"><p>24 de Agosto, 2017</p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -297,7 +277,7 @@
         <br/>
         
 
-
+ 
 
 
 <div id="sourcelink">
@@ -309,7 +289,7 @@
     </p>
     <p>
         &copy; Copyright 2017, The QGIS Model Baker Project/OPENGIS.ch.<br/>
-      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.<br/>
     </p>
   </div>
 </footer>

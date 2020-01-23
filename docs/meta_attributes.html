@@ -1,32 +1,21 @@
 
 <!DOCTYPE html>
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Meta Attributes &mdash; QGIS Model Baker Documentation 1.0 documentation</title>
-    
+    <meta charset="utf-8" />
+    <title>Meta Attributes &#8212; QGIS Model Baker Documentation 1.0 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/style.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
+    <link rel="stylesheet" type="text/css" href="_static/style.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <script type="text/javascript" src="_static/logo.js"></script>
-    <link rel="shortcut icon" href="_static/QgisModelBaker-logo-noborder.ico"/>
-    <link rel="top" title="QGIS Model Baker Documentation 1.0 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Development" href="development.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -37,8 +26,7 @@
 <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
 <script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
 
-  </head>
-  <body role="document">
+  </head><body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -49,7 +37,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html"><span><img src="_static/QgisModelBaker-logo.svg"></span>
+        <a class="navbar-brand" href="index.html">
           QGIS Model Baker Documentation</a>
         <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
       </div>
@@ -70,7 +58,7 @@
 <li class="toctree-l1"><a class="reference internal" href="get_started.html">Get Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="user-guide.html">User guide for the QGIS Project Generator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Meta Attributes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Meta Attributes</a></li>
 </ul>
 </ul>
 </li>
@@ -134,7 +122,7 @@
     </div>
   </div>
 
-<div class="container"><span class="shadow-background"><img src="_static/QgisModelBaker-logo.svg"></span>
+<div class="container">
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><li class="dropdown globaltoc-container">
@@ -149,7 +137,7 @@
 <li class="toctree-l1"><a class="reference internal" href="get_started.html">Get Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="user-guide.html">User guide for the QGIS Project Generator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Meta Attributes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Meta Attributes</a></li>
 </ul>
 </ul>
 </li>
@@ -158,122 +146,143 @@
     <div class="col-md-9 content">
       
   <div class="section" id="meta-attributes">
-<h1><a class="toc-backref" href="#id4">Meta Attributes</a><a class="headerlink" href="#meta-attributes" title="Permalink to this headline">¶</a></h1>
+<h1><a class="toc-backref" href="#id7">Meta Attributes</a><a class="headerlink" href="#meta-attributes" title="Permalink to this headline">¶</a></h1>
 <div class="contents topic" id="contents">
-<p class="topic-title first">Contents</p>
+<p class="topic-title">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#meta-attributes" id="id4">Meta Attributes</a><ul>
-<li><a class="reference internal" href="#general" id="id5">General</a><ul>
-<li><a class="reference internal" href="#meta-attributes-in-interlis-files" id="id6">Meta Attributes in Interlis Files</a><ul>
-<li><a class="reference internal" href="#comment-vs-meta-attribute" id="id7">Comment vs. Meta Attribute</a></li>
-<li><a class="reference internal" href="#syntax" id="id8">Syntax</a></li>
+<li><p><a class="reference internal" href="#meta-attributes" id="id7">Meta Attributes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#general" id="id8">General</a></p>
+<ul>
+<li><p><a class="reference internal" href="#meta-attributes-in-interlis-files" id="id9">Meta Attributes in Interlis Files</a></p>
+<ul>
+<li><p><a class="reference internal" href="#comment-vs-meta-attribute" id="id10">Comment vs. Meta Attribute</a></p></li>
+<li><p><a class="reference internal" href="#syntax" id="id11">Syntax</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#meta-attributes-in-the-database" id="id9">Meta Attributes in the Database</a></li>
+<li><p><a class="reference internal" href="#meta-attributes-in-the-database" id="id12">Meta Attributes in the Database</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#project-generator-specific-meta-attributes" id="id10">Project Generator Specific Meta Attributes</a><ul>
-<li><a class="reference internal" href="#list-of-specific-attributes" id="id11">List of specific Attributes</a></li>
+<li><p><a class="reference internal" href="#project-generator-specific-meta-attributes" id="id13">Project Generator Specific Meta Attributes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#list-of-specific-attributes" id="id14">List of specific Attributes</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#extra-model-information-file" id="id12">Extra Model Information File</a></li>
+<li><p><a class="reference internal" href="#extra-model-information-file" id="id15">Extra Model Information File</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="general">
-<h2><a class="toc-backref" href="#id5">General</a><a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id8">General</a><a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div>«To a metaelement metaattributes could be compositional assigned (class &#8220;MetaAttribut&#8221;). The metaattributes are neither defined by the language INTERLIS nor by the meta model. They exist that the information that exceed INTERLIS could still be a component of the model data. The metaattributes has a name (attribute &#8220;Name&#8221;), that have to be unique among the the metaattributes of this metaelement, and it has a value (attribute: &#8220;Value&#8221;).»</div></blockquote>
+<div><p>«To a metaelement metaattributes could be compositional assigned (class “MetaAttribut”). The metaattributes are neither defined by the language INTERLIS nor by the meta model. They exist that the information that exceed INTERLIS could still be a component of the model data. The metaattributes has a name (attribute “Name”), that have to be unique among the the metaattributes of this metaelement, and it has a value (attribute: “Value”).»</p>
+</div></blockquote>
 <p>Translated from source: <a class="reference external" href="https://www.ech.ch/alfresco/s/ech/download?nodeid=788eb38a-bf2b-4f3d-96a8-addc37bba41f">STAN_d_DEF_2011-06-22_eCH-0117 Meta-Attribute für INTERLIS-Modelle.pdf</a> (German) from eCH www.interlis.ch</p>
 <div class="section" id="meta-attributes-in-interlis-files">
-<h3><a class="toc-backref" href="#id6">Meta Attributes in Interlis Files</a><a class="headerlink" href="#meta-attributes-in-interlis-files" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">Meta Attributes in Interlis Files</a><a class="headerlink" href="#meta-attributes-in-interlis-files" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="comment-vs-meta-attribute">
-<h4><a class="toc-backref" href="#id7">Comment vs. Meta Attribute</a><a class="headerlink" href="#comment-vs-meta-attribute" title="Permalink to this headline">¶</a></h4>
-<p>An Interlis comment starts with <code class="docutils literal"><span class="pre">!!</span></code> and ends with a line end. A meta attribute starts with <code class="docutils literal"><span class="pre">!!</span></code> as well but followed by an <code class="docutils literal"><span class="pre">&#64;</span></code>:</p>
+<h4><a class="toc-backref" href="#id10">Comment vs. Meta Attribute</a><a class="headerlink" href="#comment-vs-meta-attribute" title="Permalink to this headline">¶</a></h4>
+<p>An Interlis comment starts with <code class="docutils literal notranslate"><span class="pre">!!</span></code> and ends with a line end. A meta attribute starts with <code class="docutils literal notranslate"><span class="pre">!!</span></code> as well but followed by an <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>:</p>
 </div>
 <div class="section" id="syntax">
-<h4><a class="toc-backref" href="#id8">Syntax</a><a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h4>
-<p>After the start of <code class="docutils literal"><span class="pre">!!&#64;</span></code> the meta attribute name follows, then equal <code class="docutils literal"><span class="pre">=</span></code>, then the attribute value:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>!!@&lt;name&gt;=&lt;value&gt;
+<h4><a class="toc-backref" href="#id11">Syntax</a><a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h4>
+<p>After the start of <code class="docutils literal notranslate"><span class="pre">!!&#64;</span></code> the meta attribute name follows, then equal <code class="docutils literal notranslate"><span class="pre">=</span></code>, then the attribute value:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!!@&lt;name&gt;=&lt;value&gt;
 </pre></div>
 </div>
 <p>Followed by the referenced element (MODEL, TOPIC, CLASS etc.)</p>
 <p><strong>Example</strong></p>
-<p><code class="docutils literal"><span class="pre">furtherInformation</span></code> is referenced to <code class="docutils literal"><span class="pre">ExceptionalLoadsCatalogues_V1</span></code>, <code class="docutils literal"><span class="pre">topicInformation</span></code> to <code class="docutils literal"><span class="pre">TypeOfRouteCatalogue</span></code> and <code class="docutils literal"><span class="pre">dispExpression</span></code> to <code class="docutils literal"><span class="pre">TypeOfRoute</span></code>.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">ExceptionalLoadsRoute.ili</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> !!@ furtherInformation=https://www.astra.admin.ch/
+ MODEL ExceptionalLoadsCatalogues_V1 (en)
+ AT &quot;http://models.geo.admin.ch/ASTRA/&quot;
+ VERSION &quot;2017-02-08&quot;  =
+   IMPORTS CatalogueObjects_V1,Units;
+   !!@ topicInformation=&quot;Route-Type&quot;
+   TOPIC TypeOfRouteCatalogue
+   EXTENDS CatalogueObjects_V1.Catalogues =
+     !!@ dispExpression=&quot;CONCAT(type, &#39; sometext&#39;)&quot;
+     CLASS TypeOfRoute
+     EXTENDS CatalogueObjects_V1.Catalogues.Item =
+</pre></div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">furtherInformation</span></code> is referenced to <code class="docutils literal notranslate"><span class="pre">ExceptionalLoadsCatalogues_V1</span></code>, <code class="docutils literal notranslate"><span class="pre">topicInformation</span></code> to <code class="docutils literal notranslate"><span class="pre">TypeOfRouteCatalogue</span></code> and <code class="docutils literal notranslate"><span class="pre">dispExpression</span></code> to <code class="docutils literal notranslate"><span class="pre">TypeOfRoute</span></code>.</p>
 <p>For more complex usage see the <a class="reference external" href="https://www.ech.ch/alfresco/s/ech/download?nodeid=788eb38a-bf2b-4f3d-96a8-addc37bba41f">specification of the Verein eCH</a></p>
 </div>
 </div>
 <div class="section" id="meta-attributes-in-the-database">
-<h3><a class="toc-backref" href="#id9">Meta Attributes in the Database</a><a class="headerlink" href="#meta-attributes-in-the-database" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id12">Meta Attributes in the Database</a><a class="headerlink" href="#meta-attributes-in-the-database" title="Permalink to this headline">¶</a></h3>
 <p>When importing the data from the Interlis file to the DB, with ili2db integrated in the Project Generator, the meta attributes are stored in the table <strong>t_ili2db_meta_attrs</strong>:</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="58%" />
-<col width="17%" />
-<col width="25%" />
+<col style="width: 58%" />
+<col style="width: 17%" />
+<col style="width: 25%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">ilielement</th>
-<th class="head">attr_name</th>
-<th class="head">attr_value</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>ilielement</p></th>
+<th class="head"><p>attr_name</p></th>
+<th class="head"><p>attr_value</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>ExceptionalLoadsCatalogues_V1</td>
-<td>furtherInformation</td>
-<td><a class="reference external" href="https://www.astra.admin.ch/">https://www.astra.admin.ch/</a></td>
+<tbody>
+<tr class="row-even"><td><p>ExceptionalLoadsCatalogues_V1</p></td>
+<td><p>furtherInformation</p></td>
+<td><p><a class="reference external" href="https://www.astra.admin.ch/">https://www.astra.admin.ch/</a></p></td>
 </tr>
-<tr class="row-odd"><td>ExceptionalLoadsCatalogues_V1.TypeOfRouteCatalogue</td>
-<td>topicInformation</td>
-<td>Route-Type</td>
+<tr class="row-odd"><td><p>ExceptionalLoadsCatalogues_V1.TypeOfRouteCatalogue</p></td>
+<td><p>topicInformation</p></td>
+<td><p>Route-Type</p></td>
 </tr>
-<tr class="row-even"><td>ExceptionalLoadsCatalogues_V1.TypeOfRouteCatalogue.TypeOfRoute</td>
-<td>dispExpression</td>
-<td>CONCAT(type, &#8216; sometext&#8217;)</td>
+<tr class="row-even"><td><p>ExceptionalLoadsCatalogues_V1.TypeOfRouteCatalogue.TypeOfRoute</p></td>
+<td><p>dispExpression</p></td>
+<td><p>CONCAT(type, ‘ sometext’)</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="section" id="project-generator-specific-meta-attributes">
-<h2><a class="toc-backref" href="#id10">Project Generator Specific Meta Attributes</a><a class="headerlink" href="#project-generator-specific-meta-attributes" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id13">Project Generator Specific Meta Attributes</a><a class="headerlink" href="#project-generator-specific-meta-attributes" title="Permalink to this headline">¶</a></h2>
 <p>Some additional non standard meta attributes are understood by the project generator as properties in the QGIS project.</p>
 <div class="section" id="list-of-specific-attributes">
-<h3><a class="toc-backref" href="#id11">List of specific Attributes</a><a class="headerlink" href="#list-of-specific-attributes" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id14">List of specific Attributes</a><a class="headerlink" href="#list-of-specific-attributes" title="Permalink to this headline">¶</a></h3>
 <p><strong>dispExpression</strong>
 Used as the display expression for a layer. The display expression is the <em>name</em> that is used to identify a feature by text. One of the places where this is used is the combobox that is shown for a Relation Reference Widget on feature forms.</p>
-<p><a href="#id2"><span class="problematic" id="id3">|relation_reference|</span></a></p>
+<p><a href="#id5"><span class="problematic" id="id6">|relation_reference|</span></a></p>
 </div>
 </div>
 <div class="section" id="extra-model-information-file">
-<h2><a class="toc-backref" href="#id12">Extra Model Information File</a><a class="headerlink" href="#extra-model-information-file" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id15">Extra Model Information File</a><a class="headerlink" href="#extra-model-information-file" title="Permalink to this headline">¶</a></h2>
 <p>In these external files the meta attributes can be stored instead of having them directly in the Interlis files.</p>
-<p>These files are written in TOML and have the filename extension <code class="docutils literal"><span class="pre">.toml</span></code></p>
+<p>These files are written in TOML and have the filename extension <code class="docutils literal notranslate"><span class="pre">.toml</span></code></p>
 <p>You can select the extra meta attribute files in the <strong>Advanced Options</strong>. This configuration is stored for the model. This means when you reselect the same model later again, the file is still referenced. This information will be displayed on the main dialog of the Project Generator.</p>
 <p>In the background ili2pg writes the meta attributes from the external meta attribute file to the PostGIS or GeoPackage storage, where the Project Generator can use them to build the QGIS project.</p>
 <p><strong>Example</strong></p>
-<div class="literal-block-wrapper docutils container" id="exceptionalloadsroute-toml">
-<div class="code-block-caption"><span class="caption-text">ExceptionalLoadsRoute.toml</span><a class="headerlink" href="#exceptionalloadsroute-toml" title="Permalink to this code">¶</a></div>
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[&quot;ExceptionalLoadsRoute.TypeOfRouteCatalogue.TypeOfRoute&quot;]</span>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">ExceptionalLoadsRoute.toml</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[&quot;ExceptionalLoadsRoute.TypeOfRouteCatalogue.TypeOfRoute&quot;]</span>
 <span class="na">dispExpression</span><span class="o">=</span><span class="s">&quot;type&quot;</span>
 </pre></div>
 </div>
 </div>
 <p><strong>More complex example</strong></p>
-<div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">ExceptionalLoadsRoute.toml</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[&quot;ExceptionalLoadsCatalogues_V1.TypeOfRouteCatalogue.TypeOfRoute&quot;]</span>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">ExceptionalLoadsRoute.toml</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[&quot;ExceptionalLoadsCatalogues_V1.TypeOfRouteCatalogue.TypeOfRoute&quot;]</span>
 <span class="na">dispExpression</span><span class="o">=</span><span class="s">&quot;CONCAT(type, &#39; sometext&#39;)&quot;</span>
 </pre></div>
 </div>
 </div>
-<p>The keys that need to be used for the TOML sections are the <em>fully qualified Interlis names</em> of the objects. In the example above this is <code class="docutils literal"><span class="pre">[&quot;ExceptionalLoadsCatalogues_V1.TypeOfRouteCatalogue.TypeOfRoute&quot;]</span></code>. A list of all available names can be found in the database table <code class="docutils literal"><span class="pre">t_ili2db_classname</span></code> after doing a schema import.</p>
+<p>The keys that need to be used for the TOML sections are the <em>fully qualified Interlis names</em> of the objects. In the example above this is <code class="docutils literal notranslate"><span class="pre">[&quot;ExceptionalLoadsCatalogues_V1.TypeOfRouteCatalogue.TypeOfRoute&quot;]</span></code>. A list of all available names can be found in the database table <code class="docutils literal notranslate"><span class="pre">t_ili2db_classname</span></code> after doing a schema import.</p>
 <p><strong>Ili example</strong></p>
 <p>The above example would be written as follows directly in an ili file. If the above configuration is in the ini file, the ili meta attribute is no longer required, this is only here for reference.</p>
-<div class="literal-block-wrapper docutils container" id="exceptionalloadsroute-ili">
-<div class="code-block-caption"><span class="caption-text">ExceptionalLoadsRoute.ili</span><a class="headerlink" href="#exceptionalloadsroute-ili" title="Permalink to this code">¶</a></div>
-<div class="highlight-ili"><div class="highlight"><pre><span></span>!!@dispExpression=&quot;type&quot;
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">ExceptionalLoadsRoute.ili</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-ili notranslate"><div class="highlight"><pre><span></span>!!@dispExpression=&quot;type&quot;
 CLASS TypeOfRoute=
   type: MANDATORY TEXT*25;
 END TypeOfRoute;
@@ -296,7 +305,7 @@ END TypeOfRoute;
         <br/>
         
 
-
+ 
 
 
 <div id="sourcelink">
@@ -308,7 +317,7 @@ END TypeOfRoute;
     </p>
     <p>
         &copy; Copyright 2017, The QGIS Model Baker Project/OPENGIS.ch.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.<br/>
     </p>
   </div>
 </footer>
