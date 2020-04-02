@@ -1,6 +1,6 @@
-=========================================
-User guide for the QGIS Project Generator
-=========================================
+===================================
+User guide for the QGIS Model Baker
+===================================
 
 .. contents::
 
@@ -12,11 +12,15 @@ User guide for the QGIS Project Generator
 .. |generate| image:: images/generate.png
 .. |import| image:: images/import.png
 .. |export| image:: images/export.png
+.. |upgrade_1| image:: images/upgrade_01_create.png
+.. |upgrade_2| image:: images/upgrade_02_exportdata.png
+.. |upgrade_3| image:: images/upgrade_03_import_schema.png
+.. |upgrade_4| image:: images/upgrade_04_import_data.png
 
 Introduction
 ============
 
-This document contains information about Project Generator usage for QGIS 3.
+This document contains information about Model Baker usage for QGIS 3.
 
 This is a QGIS plugin to quickly generate QGIS projects from an existing model with a few mouseclicks.
 
@@ -27,7 +31,7 @@ Interlis models contain more information than a plain database schema. This plug
 Generate Project
 ================
 
-To generate configured QGIS projects from Interlis models or PostgreSQL/PostGIS schemas, go to menu Database -> Project Generator -> Generate. The result QGIS project is ready to capture and edit data according to the rules defined in source Interlis models. This includes a custom layer tree order, layer edit forms with appropriate widgets per attribute type, constraints, domains (lists of values allowed for certain attributes), relations among layers and more. 
+To generate configured QGIS projects from Interlis models or PostgreSQL/PostGIS schemas, go to menu Database -> Model Baker -> Generate. The result QGIS project is ready to capture and edit data according to the rules defined in source Interlis models. This includes a custom layer tree order, layer edit forms with appropriate widgets per attribute type, constraints, domains (lists of values allowed for certain attributes), relations among layers and more. 
 
 Dialog options are described in the following lines (use numbers to locate specific options in the picture). 
 
@@ -35,12 +39,11 @@ Dialog options are described in the following lines (use numbers to locate speci
 |generate|
 
 **1.	Generation Mode**
-Project Generator is able to generate QGIS projects from both Interlis models or PostgreSQL/PostGIS existing schemas. You should start using this list to choose what mode you want the plugin to work on.
+Model Baker is able to generate QGIS projects from both Interlis models or PostgreSQL/PostGIS existing schemas. You should start using this list to choose what mode you want the plugin to work on.
 
-If you choose `Interlis` Project Generator employs ili2pg under the hood to convert your (conceptual) Interlis models into phisical ones stored in PostgreSQL/PostGIS. As long as you have Internet access when you first run the plugin, you shouldn't care about installing ili2pg, since Project Generator will download it and place it in a plugin's subfolder.
+If you choose `Interlis` Model Baker employs ili2pg under the hood to convert your (conceptual) Interlis models into phisical ones stored in PostgreSQL/PostGIS. As long as you have Internet access when you first run the plugin, you shouldn't care about installing ili2pg, since Model Baker will download it and place it in a plugin's subfolder.
 
-If, on the contrary, you choose `PostGIS`, Project Generator uses a PostgreSQL/PostGIS schema to generate your QGIS project. This option allows you to reconstruct a QGIS project from Interlis models, even if they were already converted into phisical models. Note that you could eventually use the plugin for generating QGIS projects from your PostgreSQL/PostGIS schemas, even if they are not related to Interlis in any way, however, Project Generator exploits Interlis expressiveness and we suggest you to use it with Interlis-based models.
-
+If, on the contrary, you choose `PostGIS`, Model Baker uses a PostgreSQL/PostGIS schema to generate your QGIS project. This option allows you to reconstruct a QGIS project from Interlis models, even if they were already converted into phisical models. Note that you could eventually use the plugin for generating QGIS projects from your PostgreSQL/PostGIS schemas, even if they are not related to Interlis in any way, however, Model Baker exploits Interlis expressiveness and we suggest you to use it with Interlis-based models.
 
 **2.	Interlis Model (only for Interlis mode)**
 Based on the Custom Model Directories you set in Plugin Configuration (link), you can choose what models you want to convert into a PostgreSQL/PostGIS schema. Model names are specified in interlis model (ili) files. An ili file can contain a number of models. Since model names should be given strictly as they were spelled in Interlis files, once you start typing, autocompletion will help you discover available models with their correct spelling.
@@ -55,7 +58,7 @@ You can set the CRS you want to use for geometry tables defined in your Interlis
 
 
 **5.	Advanced options (only for Interlis mode)**
-Since Project Generator uses ili2db when in Interlis mode, you can set advanced options that determine how your conceptual object-oriented model is mapped into a PostgreSQL/PostGIS  relational model.
+Since Model Baker uses ili2db when in Interlis mode, you can set advanced options that determine how your conceptual object-oriented model is mapped into a PostgreSQL/PostGIS  relational model.
 
 ***Inheritance***
 
@@ -82,7 +85,7 @@ Set the port of the database server. By default is 5432.
 Set the database name. The database should exist already.
 
 **9.	Database Schema**
-Set the database schema where you want to create the phisical model. The schema acts like a folder, it helps you to organize database objects like tables and relations and isolate them from other schemas. If you don't specify a database schema, Project Generator will create a schema for you, whose name will correspond to the database name. You can even choose an existing schema, but you'd better know what you're doing, because it will overwrite previous ili2db configurations.
+Set the database schema where you want to create the phisical model. The schema acts like a folder, it helps you to organize database objects like tables and relations and isolate them from other schemas. If you don't specify a database schema, Model Baker will create a schema for you, whose name will correspond to the database name. You can even choose an existing schema, but you'd better know what you're doing, because it will overwrite previous ili2db configurations.
 
 **10.	Database User**
 Set the user to access the database.
@@ -97,7 +100,7 @@ This panel shows log messages of the whole process once Create button is clicked
 Import an Interlis Transfer File (.xtf)
 =======================================
 
-To import data from Interlis Transfer Files (XTF) into PostgreSQL/PostGIS schemas, go to menu Database -> Project Generator -> Import Interlis Transfer File (.xtf). 
+To import data from Interlis Transfer Files (XTF) into PostgreSQL/PostGIS schemas, go to menu Database -> Model Baker -> Import Interlis Transfer File (.xtf). 
 
 Dialog options are described in the following lines (use numbers to locate specific options in the picture). 
 
@@ -123,7 +126,7 @@ Set the port of the database server. By default is 5432.
 Set the database name. The database should exist already.
 
 **7.	Database Schema**
-Set the database schema where you want to import data from the XTF file. Normally, you would import data into existing schemas, but you could also import your data into new schemas. In the former case, your data are expected to follow the model with which the existing schema was generated, otherwise errors may occur. In the latter case, a new schema will be generated with default parameters given by Project Generator and from previous sessions (if you have run Generate before).
+Set the database schema where you want to import data from the XTF file. Normally, you would import data into existing schemas, but you could also import your data into new schemas. In the former case, your data are expected to follow the model with which the existing schema was generated, otherwise errors may occur. In the latter case, a new schema will be generated with default parameters given by Model Baker and from previous sessions (if you have run Generate before).
 
 **8.	Database User**
 Set the user to access the database.
@@ -138,7 +141,7 @@ This panel shows log messages of the whole process once Import button is clicked
 Export an Interlis Transfer File (.xtf)
 =======================================
 
-To export data from PostgreSQL/PostGIS schemas into Interlis Transfer Files (XTF), go to menu Database -> Project Generator -> Export Interlis Transfer File (.xtf).
+To export data from PostgreSQL/PostGIS schemas into Interlis Transfer Files (XTF), go to menu Database -> Model Baker -> Export Interlis Transfer File (.xtf).
 
 Dialog options are described in the following lines (use numbers to locate specific options in the picture).  
 
@@ -175,7 +178,7 @@ This panel shows log messages of the whole process once Export button is clicked
 Plugin Configuration
 ====================
 
-To start using the plugin, go to menu Database -> Project Generator -> Settings, where you can set:
+To start using the plugin, go to menu Database -> Model Baker -> Settings, where you can set:
 
  + **Custom Model Directories**:
 
@@ -190,7 +193,7 @@ To start using the plugin, go to menu Database -> Project Generator -> Settings,
 
  + **Java Path**:
 
-   By default, Project Generator searches for Java executable in `%JAVA_HOME` environment variable. However, you can overwrite such behavior by setting a custom path to Java executable file in this window. This is useful, for instance, when environment variables are not well set and you have no rights to set them in your machine's operating system.
+   By default, Model Baker searches for Java executable in `%JAVA_HOME` environment variable. However, you can overwrite such behavior by setting a custom path to Java executable file in this window. This is useful, for instance, when environment variables are not well set and you have no rights to set them in your machine's operating system.
 
 
 |settings_1|
@@ -203,6 +206,41 @@ To start using the plugin, go to menu Database -> Project Generator -> Settings,
 |settings_4|
 
 |settings_5|
+
+Upgrade your Database from ili2db 3 to 4
+========================================
+
+Once in a while, you may see a message like this:
+
+|upgrade_1|
+
+Databases created with ili2db version 3 are still supported by Model Baker, but it's suggested to upgrade them to the currently used version 4 of ili2db.
+
+It's super easy to do that with Model Baker.
+
+**1.  Export Data**
+
+First export your data to an XTF file.
+
+|upgrade_2|
+
+It's exported with ili2db 4, but with the paramter `--export3`, enabling the export of the databases created with ili2db 3. 
+
+**2.  Import Database**
+
+Import your database according to the selected models.
+
+|upgrade_3|
+
+It's imported with ili2db 4. Your database is now on the current state of version 4.
+
+**3.  Import Data**
+
+Import your data back again.
+
+|upgrade_4|
+
+And it's done.
 
 :Author: Sergio Ramírez, Germán Carrillo
 :Date: Aug 24, 2017
