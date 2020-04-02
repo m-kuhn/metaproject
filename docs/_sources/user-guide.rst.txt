@@ -39,7 +39,7 @@ Project Generator is able to generate QGIS projects from both Interlis models or
 
 If you choose `Interlis` Project Generator employs ili2pg under the hood to convert your (conceptual) Interlis models into phisical ones stored in PostgreSQL/PostGIS. As long as you have Internet access when you first run the plugin, you shouldn't care about installing ili2pg, since Project Generator will download it and place it in a plugin's subfolder.
 
-If, on the contrary, you choose `PostGIS`, Project Generator uses a PostgreSQL/PostGIS schema to generate your QGIS project. This option allows you to reconstruct a QGIS project from Interlis models, even if they were already converted into phisical models. Note that you could eventually use the plugin for generating QGIS projects from your PostgreSQL/PostGIS schemas, even if they are not related to Interlis in any way, however, Project Generator exploits Interlis expresiveness and we suggest you to use it with Interlis-based models.
+If, on the contrary, you choose `PostGIS`, Project Generator uses a PostgreSQL/PostGIS schema to generate your QGIS project. This option allows you to reconstruct a QGIS project from Interlis models, even if they were already converted into phisical models. Note that you could eventually use the plugin for generating QGIS projects from your PostgreSQL/PostGIS schemas, even if they are not related to Interlis in any way, however, Project Generator exploits Interlis expressiveness and we suggest you to use it with Interlis-based models.
 
 
 **2.	Interlis Model (only for Interlis mode)**
